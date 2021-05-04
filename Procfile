@@ -1,0 +1,1 @@
+web: gunicorn golds_gym.wsgi:application

@@ -1,52 +1,166 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Gold's Gym
+The objective of this website is to advertise a specialist strength gym in order to attain new members, getting users to form a paid subscription to the gym and encouraging users to make purchases from the gym's store. The website will highlight the different unqiue selling points of the gym which includes:
+- It's access to specialist strongman equipment such as logs and atlas stones
+- The wide range of classes that are available to sign up too for gym members
+- The specialist items available for purchase from the store.
 
-Welcome USER_NAME,
+The website also introduces you to the philosophy of the gym which, alongisde testomonials, show that Gold's Gym is the place to train if you have any interest in progessing in strength sports.  
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+### **Business Goals**
+- To generate revenue for the gym by increasing the number of paid subscribers.
+- To generate revenue for the gym via store sales
+- To encourage long term members 
+- To build a stronger online presence for the gym.
 
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI you can use:
-
-`heroku login -i`
-
-If you have Multi-Factor Authentication (MFA) enabled then use the API key that was generated for you at [Heroku](https://dashboard.heroku.com/account) as your password.
-This API key is unique and private to you so do not share it. If you accidently make it public then you can create a new one with _Regenerate API Key_.
-
-## Updates Since The Instructional Video
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
+### **Customer Goals**
+- Feel satisfied with the benefits of being a gym member
+- Finding a gym to to begin training at
+- Easy to sign up too and cancel a class. 
+- It is easy to checkout from the store and complete my purchases quickly
+## UX
 ---
+### **Ideal User**
+- Anyone with an interest in strength sports
+- Anyone looking for a new gym
+- Anyone looking for personal development  
+- Anyone looking to take their sport to the next level
+- Anyone in need of gym gear/supplements
+### **User Stories**
+As a guest user I want...
+-	to immediately understand the sites purpose
+-	site navigation to be intuitive.
+-	to be able to see the available products
+-	to be able to search the site for specific products
+-	to be able to view individual product details
+-	to be able to easily view the shopping bag
+-	to be able to easily to adjust product quantities in the shopping bag
+-	to be able to easily remove products form the shopping bag
+-	to be given feedback when a bag adjustment is made
+-	to receive order confirmation
+-	to be able to easily create an account
+-	to understand the benefits of being a registered user
+-	the benefits of subscribing to the gym to be clear
+-	to be able to choose from an option of subscriptions
 
-Happy coding!
+
+As a registered user I want...
+-	To be able to log in and out easily
+-	To be able to reset my password if needed
+-	To receive conformation I have registered for the site
+-	To have a personalised profile
+-	 To save/remove favourite products to/from my profile
+-	To save my delivery details for faster checkout
+-	To be able to update my delivery details
+-	To be able to read the fitness blog
+
+
+As a subscribed user I want...
+-	My store discount to be obviously visible
+-	To be able to sign up to a range of classes at the gym
+-	To easily be able to change the class I am signed up to
+-	To be reminded by email on the morning of a class
+
+As a superuser I want…
+-	To be easily able to add/edit and delete products
+-	To be able to add blog posts
+-	To be able to edit and delete all blog posts and comments
+-	To be able to view and manage site users
+-	To be able to view and manage the members store
+-	To be able to add/edit and remove classes from the timetable
+### **Design Choices**
+#### **Font**
+#### **Icons**
+#### **Colors**
+The color scheme was entirely based around the colour of the logo - I used dev tools to get the exact hex colour of both the yellow background and grey text.
+### **Wireframes**
+<details><summary>Homepage</summary>
+<p>
+
+![Home-Page-Wireframe](static/UX/wireframes/home_page.PNG)
+
+</p>
+</details>
+
+<details><summary>About</summary>
+<p>
+
+![About-Page-Wireframe](static/UX/wireframes/about.PNG)
+
+</p>
+</details>
+
+<details><summary>Registration</summary>
+<p>
+
+![Registration-Page-Wireframe](static/UX/wireframes/registration.PNG)
+
+</p>
+</details>
+
+<details><summary>Profile</summary>
+<p>
+
+![Profile-Page-Wireframe](static/UX/wireframes/profile.PNG)
+
+</p>
+</details>
+
+<details><summary>Classes</summary>
+<p>
+
+![Classes-Page-Wireframe](static/UX/wireframes/classes.PNG)
+
+</p>
+</details>
+
+<details><summary>Membership</summary>
+<p>
+
+![Membership-Page-Wireframe](static/UX/wireframes/membership.PNG)
+
+</p>
+</details>
+
+<details><summary>All Products</summary>
+<p>
+
+![All-Products-Page-Wireframe](static/UX/wireframes/all_products.PNG)
+
+</p>
+</details>
+
+<details><summary>Product Details</summary>
+<p>
+
+![Product-Detials-Page-Wireframe](static/UX/wireframes/product_details.PNG)
+
+</p>
+</details>
+
+<details><summary>Shopping Bag</summary>
+<p>
+
+![Shopping-Bag-Page-Wireframe](static/UX/wireframes/shopping_bag.PNG)
+
+</p>
+</details>
+
+<details><summary>Checkout</summary>
+<p>
+
+![Checkout-Page-Wireframe](static/UX/wireframes/checkout.PNG)
+
+</p>
+</details>
+
+<details><summary>Checkout Success</summary>
+<p>
+
+![Checkout-Success-Page-Wireframe](static/UX/wireframes/checkout_success.PNG)
+
+</p>
+</details>
+
+
+
+
