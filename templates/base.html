@@ -41,55 +41,116 @@
 
 <body>
     <div class="header-container container-fluid">
-        <header class="row nav-container">
+        <header class="row nav-container w-100">
             <div class="col-4 logo-container text-center">
                 <a href="{% url 'index' %}">
                     <img src="/static/images/logo.png" alt="Gold Gyms logo" id="logo">
                 </a>
             </div>
-            <div class="col-8 navbar-container">
-                <nav class="navbar navbar-expand-lg">
-                    <ul class="navbar-nav text-center mx-auto">
-                        <li class="nav-item">
-                            <a href="#">About |</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Store |</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Classes |</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#">Membership&nbsp;</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-user fa-lg">&nbsp;</i>
-                            </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                                {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                <a href="#" class="dropdown-item">Product Management</a>
-                                {% endif %}
-                                <a href="#" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                {% endif %}
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                                href="#"><i class="fas fa-shopping-cart fa-lg"></i></a>
-                        </li>
-                    </ul>
-
+            <div class="col-8 navbar-container text-center my-auto">
+                <div class="d-inline-block d-xl-none">
+                    <li class="list-inline-item nav-item dropdown">
+                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user fa-lg">&nbsp;</i>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <a href="#" class="dropdown-item">Product Management</a>
+                            {% endif %}
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
+                        </div>
+                    </li>
+                    <li class="list-inline-item nav-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="#"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                    </li>
+                </div>
+                <nav class="navbar navbar-expand-xl d-inline-block">
+                    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+                        data-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon d-inline-block"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="main-nav">
+                            <ul class="d-none d-xl-inline-flex navbar-nav">
+                                <li class="nav-item list-inline-item">
+                                    <a href="#" class="nav-link">About</a>
+                                </li>
+                                <li class="nav-item list-inline-item">
+                                    <a href="#" class="nav-link">Store</a>
+                                </li>
+                                <li class="nav-item list-inline-item">
+                                    <a href="#" class="nav-link">Classes</a>
+                                </li>
+                                <li class="nav-item list-inline-item">
+                                    <a href="#" class="nav-link">Membership</a>
+                                </li>
+                            </ul>
+                            <ul class="d-block d-xl-none navbar-nav dropdown-menu dropdown-menu-right">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-item">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-item">Store</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-item">Classes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link dropdown-item">Membership</a>
+                                </li>
+                            </ul>        
+                    </div>    
                 </nav>
+                <div class="d-none d-xl-inline-block">
+                    <li class="list-inline-item nav-item dropdown">
+                        <a class="text-black nav-link align-content-center" href="#" id="user-options" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <p class="my-0">My Account</p>
+                            </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <a href="#" class="dropdown-item">Product Management</a>
+                            {% endif %}
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
+                        </div>
+                        
+                    </li>
+                    <li class="list-inline-item nav-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="#"><i class="fas fa-shopping-cart fa-lg"></i>
+                            <p class="my-0">
+                                    {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        £0.00
+                                    {% endif %}
+                                </p>
+                            </a>
+                    </li>
+                </div>
             </div>
-            <div class="row hero-text-container">
+            <div class="row hero-text-container w-100">
+                <div class="col-12">
                 {% block extra_hero_text %}{% endblock %}
+                <h1 class="text-center">Golds Gym</h1>
+                </div>
             </div>
         </header>
     </div>
