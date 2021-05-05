@@ -2,42 +2,124 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     {% block meta %}
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% endblock %}
 
     {% block corecss %}
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extracss %}
     {% endblock %}
 
     {% block core_js %}
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/32bcff04b3.js" crossorigin="anonymous"></script>
-        <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/32bcff04b3.js" crossorigin="anonymous"></script>
+    <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
-    
+
     {% block extra_js %}
     {% endblock %}
 
     <title>Gold's Gym {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
+</head>
+
+<body>
+    <div class="header-container container-fluid">
+        <header class="row nav-container">
+            <div class="col-4 logo-container text-center">
+                <a href="{% url 'index' %}">
+                    <img src="/static/images/logo.png" alt="Gold Gyms logo" id="logo">
+                </a>
+            </div>
+            <div class="col-8 navbar-container">
+                <nav class="navbar navbar-expand-lg">
+                    <ul class="navbar-nav text-center mx-auto">
+                        <li class="nav-item">
+                            <a href="#">About |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Store |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Classes |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Membership&nbsp;</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-user fa-lg">&nbsp;</i>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                {% if request.user.is_superuser %}
+                                <a href="#" class="dropdown-item">Product Management</a>
+                                {% endif %}
+                                <a href="#" class="dropdown-item">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                                href="#"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <div class="row hero-text-container">
+                {% block extra_hero_text %}{% endblock %}
+            </div>
+        </header>
+    </div>
+    <!--
+    {% if messages %}
+        <div class="message-container">
+        {% for message in messages %}
+            {% with message.level as level %}
+                {% if level == 40 %}
+                    {% include 'includes/toasts/toast_error.html' %}
+                {% elif level == 30 %}
+                    {% include 'includes/toasts/toast_warning.html' %}
+                {% elif level == 25 %}
+                    {% include 'includes/toasts/toast_success.html' %}
+                {% else %}
+                    {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+            {% endwith %}
+        {% endfor %}
+        </div>
+    {% endif %}
+    -->
     {% block page_header %}
     {% endblock %}
-    
+
     {% block content %}
     {% endblock %}
 
     {% block postloadjs %}
     {% endblock %}
-  </body>
+</body>
+
 </html>

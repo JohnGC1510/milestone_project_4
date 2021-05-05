@@ -1,3 +1,64 @@
-body {
-    color: red;
+.container, .container-fluid{
+    margin:0;
+    padding:0
+}
+
+/*------ Base Tempalte -------*/
+.header-container{ 
+    background: url('/static/images/gym-background-4.jpg') no-repeat fixed;
+    background-position: 0px -500px;
+    background-size: cover;
+    height: 50vh;
+}
+
+.nav-container{
+    height:200px;
+}
+
+
+.navbar-container{
+    margin: auto auto;
+}
+
+.logo-container{
+    height: inherit;
+}
+
+#logo{
+    max-height:100%;
+}
+
+.navbar-container .nav-item a{
+    color:#ffec00;
+    font-size: 1.5rem;
+    padding-left: 15px;
+    letter-spacing: 2px;
+}
+
+.fas{
+    padding-bottom: -1px;
+}
+
+.dropdown .dropdown-menu a{
+    color:#000 !important;
+}
+
+/*------ Media Commands -------*/
+@media only screen and (max-width: 1024px){
+    .header-container{
+        height:35vh;
+        background-position: 0px -300px;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    
+}
+
+@media only screen and (max-width:576px){
+    
+}
+
+@media only screen and (max-width:576px){
+    
 }
