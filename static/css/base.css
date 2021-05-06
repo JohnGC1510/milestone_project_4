@@ -18,6 +18,12 @@ h1, h2, h3, h4, h5{
     color:#ffec00;
 }
 
+.section-header{
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color:#0a0a0a;
+    margin:1em auto; 
+}
 /*----- Colors ------*/
 .yellow-txt-color{
     color:#ffec00;
