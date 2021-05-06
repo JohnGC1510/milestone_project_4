@@ -42,6 +42,10 @@ h1, h2, h3, h4, h5{
     padding-top:10px;
 }
 
+.hero-text-container{
+    padding-top: 2.5rem;
+}
+
 .nav-container{
     height:200px;
     justify-content: right;
@@ -74,7 +78,8 @@ h1, h2, h3, h4, h5{
 }
 
 .navbar-container a:hover,
-.navbar-container a:focus{
+.navbar-container a:focus,
+.footer-container div a:hover{
     color:white;
 }
 
@@ -90,6 +95,19 @@ h1, h2, h3, h4, h5{
 .fas{
     padding-bottom: -1px;
 }
+
+.footer-container{
+    background-color:#0a0a0a;
+    padding:2em 0;
+}
+
+.footer-container div a,
+.footer-container div span{
+    color:#ffec00;
+    font-size:2rem;
+    padding:0.5rem;
+}
+
 
 
 
@@ -136,6 +154,9 @@ h1, h2, h3, h4, h5{
     .custom-toggler.navbar-toggler{
     font-size: 0.8rem;
     }
+    .hero-text-container h1{
+        font-size:2rem;
+    }
 }
 
 @media only screen and (max-width:320px){
@@ -146,4 +167,13 @@ h1, h2, h3, h4, h5{
     .navbar-container .nav-item a{
     font-size: 0.8rem;
     }
+    .hero-text-container h1{
+        font-size:2rem;
+    }
+    .footer-container div a,
+.footer-container div span{
+    color:#ffec00;
+    font-size:1.3rem;
+    padding:0.5rem;
+}
 }
