@@ -3,20 +3,48 @@
     padding:0
 }
 
+.body{
+    font-family: 'Raleway', sans-serif;
+}
+
+/*----- Headings -----*/
+h1, h2, h3, h4, h5{
+    font-family: 'Goblin One', sans-serif;
+}
+
+.main-title{
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color:#ffec00;
+}
+
+/*----- Colors ------*/
+.yellow-txt-color{
+    color:#ffec00;
+}
+.yellow-bg-color{
+    background-color:#ffec00;
+}
+
+.grey-txt-color{
+    color:rgb(44,44,43);
+}
+.grey-bg-color{
+    color:rgb(44,44,43);
+}
+
 /*------ Base Tempalte -------*/
 .header-container{ 
     background: url('/static/images/gym-background-4.jpg') no-repeat fixed;
     background-position: 0px -400px;
     background-size: cover;
     height: 50vh;
+    padding-top:10px;
 }
 
 .nav-container{
     height:200px;
     justify-content: right;
-}
-
-.navbar-container{
 }
 
 .logo-container{
@@ -63,6 +91,8 @@
     padding-bottom: -1px;
 }
 
+
+
 /*------ Media Commands -------*/
 @media only screen and (max-width: 1024px){
     .header-container{
@@ -72,12 +102,12 @@
 }
 
 @media only screen and (max-width: 768px){
-    
+    .nav-container{
+        height:150px;
+    }
 }
 
-@media only screen and (max-width:576px){
-    
-}
+
 
 @media only screen and (max-width:576px){
     .nav-container{
@@ -95,5 +125,25 @@
 
     .navbar-container .nav-item a{
     font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:411px){
+    .nav-container{
+        height:80px;
+        padding-left: 10px;
+    }
+    .custom-toggler.navbar-toggler{
+    font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width:320px){
+
+    .custom-toggler.navbar-toggler{
+    font-size: 0.75rem;
+    }
+    .navbar-container .nav-item a{
+    font-size: 0.8rem;
     }
 }

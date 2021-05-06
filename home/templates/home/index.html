@@ -1,6 +1,22 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block extra_hero_text_before %}
+    <h5 class="yellow-txt-color text-center mb-3 mb-xl-4">Strength and Power</h3> 
+{% endblock %}
+{% block header_call_to_action %}
+<div class="row w-100 text-center">
+    <div class="col-12">
+        <a href="#" class="btn btn-lg btn-hero yellow-bg-color grey-txt-color mt-3 rounded">
+        Sign Up Now!
+        </a>
+    </div>
+</div>
+{% endblock %}
 {% block content %}
-<h1 class="">Home Page</h1>
+<div class="home-hero-image w-100"></div>
 {% endblock %}

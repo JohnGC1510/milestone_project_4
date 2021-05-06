@@ -1,0 +1,58 @@
+/* Darken background solution from https://stackoverflow.com/questions/26621513/darken-css-background-image */
+.header-container{ 
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/static/images/background_1.jpg') no-repeat fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    padding-top:10px;
+}
+
+.hero-text-container{
+    padding-top:12rem;
+}
+
+.btn-hero{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-hero:hover{
+    background-color:rgba(255, 255, 255, 0.589);
+    color:#ffec00;
+}
+/*---- Media Commands---*/
+@media only screen and (min-width: 1981px){
+
+    .hero-text-container h5{
+        font-size: 2rem;
+    }
+
+    .hero-text-container h1{
+        font-size: 4rem;
+    }
+
+    .btn-hero{
+        width:400px;
+        height:90px;
+        font-size: 3rem;
+    }
+}
+
+
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1980px){
+    .hero-text-container h5{
+        font-size: 1.5rem;
+    }
+
+    .hero-text-container h1{
+        font-size: 3rem;
+    }
+
+    .btn-hero{
+        width:300px;
+        height:70px;
+        font-size: 2rem;
+    }
+}

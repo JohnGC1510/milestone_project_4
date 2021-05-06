@@ -13,10 +13,11 @@
     {% block corecss %}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Goblin+One&family=Raleway:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
-    {% block extracss %}
+    {% block extra_css %}
     {% endblock %}
 
     {% block core_js %}
@@ -42,12 +43,12 @@
 <body>
     <div class="header-container container-fluid">
         <header class="row nav-container w-100">
-            <div class="col-4 logo-container text-center">
+            <div class="col-3 col-sm-4 logo-container text-center">
                 <a href="{% url 'index' %}">
-                    <img src="/static/images/logo.png" alt="Gold Gyms logo" id="logo">
+                    <img src="{% static 'images/logo.png' %}" alt="Gold Gyms logo" id="logo">
                 </a>
             </div>
-            <div class="col-8 navbar-container text-center my-auto">
+            <div class="col-9 col-sm-8 navbar-container text-center my-auto">
                 <div class="d-inline-block d-xl-none">
                     <li class="list-inline-item nav-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
@@ -114,8 +115,7 @@
                         <a class="text-black nav-link align-content-center" href="#" id="user-options" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                                <i class="fas fa-user fa-lg"></i>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -135,23 +135,18 @@
                     <li class="list-inline-item nav-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="#"><i class="fas fa-shopping-cart fa-lg"></i>
-                            <p class="my-0">
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        £0.00
-                                    {% endif %}
-                                </p>
                             </a>
                     </li>
                 </div>
             </div>
             <div class="row hero-text-container w-100">
                 <div class="col-12">
-                {% block extra_hero_text %}{% endblock %}
-                <h1 class="text-center">Golds Gym</h1>
+                {% block extra_hero_text_before %}{% endblock %}
+                <h1 class="text-center main-title">Gold's Gym</h1>
+                {% block extra_hero_text_after %}{% endblock %}
                 </div>
             </div>
+            {% block header_call_to_action %}{% endblock %}
         </header>
     </div>
     <!--
