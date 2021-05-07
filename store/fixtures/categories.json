@@ -1,0 +1,71 @@
+[{
+    "pk": 1,
+    "model": "store.category",
+    "fields": {
+        "name": "protein",
+        "friendly_name": "Protein"
+    }
+}, {
+    "pk": 2,
+    "model": "store.category",
+    "fields": {
+        "name": "pre_workout",
+        "friendly_name": "Pre-workout"
+    }
+}, {
+    "pk": 3,
+    "model": "store.category",
+    "fields": {
+        "name": "clearance",
+        "friendly_name": "Clearance"
+    }
+}, {
+    "pk": 4,
+    "model": "store.category",
+    "fields": {
+        "name": "vitamins",
+        "friendly_name": "Vitamins"
+    }
+}, {
+    "pk": 5,
+    "model": "store.category",
+    "fields": {
+        "name": "vests",
+        "friendly_name": "Vests"
+    }
+}, {
+    "pk": 6,
+    "model": "store.category",
+    "fields": {
+        "name": "t_shirts",
+        "friendly_name": "t-shirts"
+    }
+}, {
+    "pk": 7,
+    "model": "store.category",
+    "fields": {
+        "name": "hoodies",
+        "friendly_name": "Hoodies"
+    }
+}, {
+    "pk": 8,
+    "model": "store.category",
+    "fields": {
+        "name": "chalk",
+        "friendly_name": "Chalk"
+    }
+}, {
+    "pk": 9,
+    "model": "store.category",
+    "fields": {
+        "name": "belts",
+        "friendly_name": "Lifting Belts"
+    }
+}, {
+    "pk": 10,
+    "model": "store.category",
+    "fields": {
+        "name": "straps_wraps",
+        "friendly_name": "Straps & Wraps"
+    }
+}]

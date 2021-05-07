@@ -1,0 +1,261 @@
+[{
+    "pk": 1,
+    "model": "store.product",
+    "fields": {
+        "name": "The Whey",
+        "description": "1kg of a premium protein blend that contaings 25g of protien per serving with less than 1g of fat. The Whey has been created using expert filtration systems and the finest ingredients, designed to provide the fuel your muscles need to grow. The ideal fuel to help both before and after a workout. Cotains 30 servings.",
+        "price": 29.99,
+        "has_size":false,
+        "category": 1,
+        "rating": 4.6,
+        "image_url": "https://s4.thcdn.com/productimg/1600/1600/11353517-1534620647868477.jpg",
+        "image": "protein-1.jpg"
+    }
+}, {
+    "pk": 2,
+    "model": "store.product",
+    "fields": {
+        "name": "Protein Bars (12-box)",
+        "description": "​Our High-Protein Bar has been created to combine excellent nutritionals with delicious taste. With 30g of high-quality protein packed into every single serving, the High-Protein Bar is the perfect snack to help you grow and maintain muscle — supporting your fitness goals, whatever your ambition.",
+        "price": 14.99,
+        "has_size":false,
+        "category": 1,
+        "rating": 4.4,
+        "image_url": "https://s1.thcdn.com/productimg/1600/1600/11281406-5234620652177329.jpg",
+        "image": "protein-2.jpg"
+    }
+}, {
+    "pk": 3,
+    "model": "store.product",
+    "fields": {
+        "name": "Pre-workout Plus",
+        "description": "This delicous pre-workout will sharpen your mind and fuel your workout to help you get the best out of your gym session. Each purchase will contain 20 servings of pre-workout.",
+        "price": 39.99,
+        "has_size":false,
+        "category": 2,
+        "rating": 4.9,
+        "image_url": "https://s2.thcdn.com/productimg/1600/1600/11715440-1254620666550632.jpg",
+        "image": "pre-workout-1.jpg"
+    }
+}, {
+    "pk": 4,
+    "model": "store.product",
+    "fields": {
+        "name": "Gold Standard Pre-workout",
+        "description": "Your mind is prepared, make sure your body is too. Gold standard preworkout is designed to unleash focus, power and performance while supporting energy to help you prepare for and get through your training. Contians 30 servings",
+        "price": 21.99,
+        "has_size":false,
+        "category": 2,
+        "rating": 4.9,
+        "image_url": "https://content.optimumnutrition.com/i/on/on-gold-standard-pre-workout_Image_01?layer0=$PDP_002$&img404=no-product-image&v=1&locale=en-gb,*",
+        "image": "pre-workout-2.png"
+    }
+}, {
+    "pk": 5,
+    "model": "store.product",
+    "fields": {
+        "name": "Metal Shaker",
+        "description": "Crafted from 100% stainless steel, our Metal Shaker is perfect for mixing supplements on the go — from weight-gainers and protein blends, to amino acids and creatine — stay on top of your nutrition, wherever you are.",
+        "price": 6.99,
+        "has_size":false,
+        "category": 3,
+        "rating": 3.9,
+        "image_url": "https://s2.thcdn.com/productimg/1600/1600/12454568-1904806518669007.jpg",
+        "image": "clearance-1.jpg"
+    }
+}, {
+    "pk": 6,
+    "model": "store.product",
+    "fields": {
+        "name": "Gallon Water Bottle",
+        "description": "Stay hydrated throughout any activity — this huge, heavy duty water bottle will cut trips to the tap and make it easy for you quench your thirst, wherever you are.",
+        "price": 8.00,
+        "has_size":false,
+        "category": 3,
+        "rating": 4.0,
+        "image_url": "https://s1.thcdn.com/productimg/1600/1600/11276782-1904637763405534.jpg",
+        "image": "clearance-2.jpg"
+    }
+}, {
+    "pk": 7,
+    "model": "store.product",
+    "fields": {
+        "name": "Opti-men Vitamins",
+        "description": "When you’re training hard, your body has greater nutritional needs. Vitamins and minerals provide a vital nutritional boost to help you cope with the demands of a fast-paced lifestyle.",
+        "price": 12.99,
+        "has_size":false,
+        "category": 4,
+        "rating": 4.9,
+        "image_url": "https://content.optimumnutrition.com/i/on/on-opti-men_Image_01?w=1010&h=1416&img404=no-product-image&v=1&locale=en-gb,*",
+        "image": "vitamin-1.png"
+    }
+}, {
+    "pk": 8,
+    "model": "store.product",
+    "fields": {
+        "name": "Essential Omega-3",
+        "description": "Omega-3 is an essential fatty acid that your body can’t make itself, so you have to get from your diet. It’s found naturally in fish oil — meaning it can be difficult to get enough of it from what you eat alone.",
+        "price": 8.99,
+        "has_size":false,
+        "category": 4,
+        "rating": 4.8,
+        "image_url": "https://s3.thcdn.com/productimg/1600/1600/10529329-5784860398509689.jpg",
+        "image": "vitamin-2.jpg"
+    }
+}, {
+    "pk": 9,
+    "model": "store.product",
+    "fields": {
+        "name": "Grey Stringer Vest",
+        "description": "this is a nice vest",
+        "price": 16.99,
+        "has_size":true,
+        "category": 5,
+        "rating": 5.0,
+        "image_url": "https://cdn.shopify.com/s/files/1/0258/7682/4122/products/golds-gym-muscle-joe-premium-stringer-grey-marl-953362_1024x1024.jpg?v=1610387129",
+        "image": "vest-1.jpg"
+    }
+}, {
+    "pk": 10,
+    "model": "store.product",
+    "fields": {
+        "name": "Red Stringer Vest",
+        "description": "this is a nice vest",
+        "price": 16.99,
+        "has_size":true,
+        "category": 5,
+        "rating": 4.9,
+        "image_url": "https://cdn.shopify.com/s/files/1/0258/7682/4122/products/golds-gym-muscle-joe-premium-stringer-red-420299_1024x1024.jpg?v=1610386419",
+        "image": "vest-2.jpg"
+    }
+}, {
+    "pk": 11,
+    "model": "store.product",
+    "fields": {
+        "name": "Blue t-shirt",
+        "description": "A nice blue t-shirt",
+        "price": 14.00,
+        "has_size":true,
+        "category": 6,
+        "rating": 4.6,
+        "image_url": "https://cdn.shopify.com/s/files/1/0258/7682/4122/products/golds-gym-muscle-joe-t-shirt-royal-591861_1024x1024.jpg?v=1610387019",
+        "image": "t-shirt-1.jpg"
+    }
+}, {
+    "pk": 12,
+    "model": "store.product",
+    "fields": {
+        "name": "Black t-shirt",
+        "description": "A nice black t-shirt",
+        "price": 14.00,
+        "has_size":true,
+        "category": 6,
+        "rating": 4.6,
+        "image_url": "https://cdn.shopify.com/s/files/1/0258/7682/4122/products/golds-gym-muscle-joe-t-shirt-black-910432_1024x1024.jpg?v=1610387193",
+        "image": "t-shirt-2.jpg"
+    }
+}, {
+    "pk": 13,
+    "model": "store.product",
+    "fields": {
+        "name": "Vintage White Marl Hoodie",
+        "description": "A white hoodie",
+        "price": 25.00,
+        "has_size":true,
+        "category": 7,
+        "rating": 4.3,
+        "image_url": "https://cdn.shopify.com/s/files/1/0258/7682/4122/products/golds-gym-long-sleeve-hooded-top-vintage-white-marl-252946_1024x1024.jpg?v=1610386479",
+        "image": "hoodie-1.jpg"
+    }
+}, {
+    "pk": 14,
+    "model": "store.product",
+    "fields": {
+        "name": "Vintage Grey Marl Hoodie",
+        "description": "A grey hoodie",
+        "price": 53.99,
+        "has_size":true,
+        "category": 7,
+        "rating": 4.6,
+        "image_url": "https://cdn.shopify.com/s/files/1/0258/7682/4122/products/golds-gym-long-sleeve-hooded-top-grey-marl-105625_1024x1024.jpg?v=1610386531",
+        "image": "hoodie-2.jpg"
+    }
+}, {
+    "pk": 15,
+    "model": "store.product",
+    "fields": {
+        "name": "Liquid Chalk",
+        "description": "Our Liquid Chalk can be used in all of your training sessions to reduce sweating and improve grip strength. It can be applied to the hands or feet to suit a range of exercises, whether that’s climbing, lifting, and gymnastics.",
+        "price": 6.00,
+        "has_size":false,
+        "category": 8,
+        "rating": 3.7,
+        "image_url": "https://s1.thcdn.com/productimg/1600/1600/10529941-1474734172642155.jpg",
+        "image": "chalk-1.jpg"
+    }
+}, {
+    "pk": 16,
+    "model": "store.product",
+    "fields": {
+        "name": "Chalk Ball",
+        "description": "56g of Magnesium Carbonate in a fabric pouch for even and long lasting distribution. Used to aid grip for Powerlifting, Weightlifting, Strongman, Functional Training and General Gym Training.",
+        "price": 4.00,
+        "has_size":false,
+        "category": 8,
+        "rating": 4.8,
+        "image_url": "https://www.strengthshop.co.uk/media/catalog/product/cache/f5c5a81670b99358961f461bdf85442d/i/m/img_3101.jpg",
+        "image": "chalk-2.jpg"
+    }
+}, {
+    "pk": 17,
+    "model": "store.product",
+    "fields": {
+        "name": "Black leather 4inch belt",
+        "description": "These belts are officially IPF approved, and are fantastic quality. They are made from artificial leather and give excellent support when lifting. Slightly more supple than standard leather belts, they mould to the contours of the back/body whilst providing unsurpassed support and protection to the back when training/lifting.",
+        "price": 79.99,
+        "has_size":false,
+        "category": 9,
+        "rating": 5.0,
+        "image_url": "https://www.strengthshop.co.uk/media/catalog/product/cache/f5c5a81670b99358961f461bdf85442d/1/3/13mm-pu-riot_7_7.jpg",
+        "image": "belt-1.jpg"
+    }
+}, {
+    "pk": 18,
+    "model": "store.product",
+    "fields": {
+        "name": "Maroon leather 3inch belt",
+        "description": "These belts are officially IPF approved, and are fantastic quality. They are made from artificial leather and give excellent support when lifting. Slightly more supple than standard leather belts, they mould to the contours of the back/body whilst providing unsurpassed support and protection to the back when training/lifting.",
+        "price": 69.99,
+        "has_size":false,
+        "category": 9,
+        "rating": 4.6,
+        "image_url": "https://www.strengthshop.co.uk/media/catalog/product/cache/f5c5a81670b99358961f461bdf85442d/p/l/plum-ipf_2_5.jpg",
+        "image": "belt-2.jpg"
+    }
+}, {
+    "pk": 19,
+    "model": "store.product",
+    "fields": {
+        "name": "Figure 8 Lifting Straps",
+        "description": "Figure of 8 straps, eliminates the set up time at the bar and any risk of the straps slipping mid lift. Increasingly popular amongst the world's elite strongmen and athletes, we have designed these with maximum robustness and comfort in mind.",
+        "price": 13.99,
+        "has_size":false,
+        "category": 10,
+        "rating": 3.7,
+        "image_url": "https://www.strengthshop.co.uk/media/catalog/product/cache/f5c5a81670b99358961f461bdf85442d/f/i/figure-of-8-black-2.jpg",
+        "image": "straps-1.jpg"
+    }
+}, {
+    "pk": 20,
+    "model": "store.product",
+    "fields": {
+        "name": "Red Knee Wraps",
+        "description": "Top quality and robust knee support for heavy to super heavy lifting. Tough, long lasting and very comfortable.",
+        "price": 24.99,
+        "has_size":false,
+        "category": 10,
+        "rating": 3.5,
+        "image_url": "https://www.strengthshop.co.uk/media/catalog/product/cache/f5c5a81670b99358961f461bdf85442d/i/n/inferno-knee-wraps.jpg",
+        "image": "wraps-1.jpg"
+    }
+} ]
