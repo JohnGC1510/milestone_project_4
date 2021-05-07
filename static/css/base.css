@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5{
 }
 /*------ Base Tempalte -------*/
 .header-container{ 
-    background: url('/static/images/gym-background-4.jpg') no-repeat fixed;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/static/images/gym-background-2.jpg') no-repeat fixed;
     background-position: 0px -400px;
     background-size: cover;
     height: 50vh;
@@ -168,6 +168,9 @@ h1, h2, h3, h4, h5{
     .navbar-container .nav-item a{
     font-size: 1rem;
     }
+    .hero-text-container h1{
+        font-size:2rem;
+    }
 }
 
 @media only screen and (max-width:411px){
@@ -187,9 +190,12 @@ h1, h2, h3, h4, h5{
     font-size:1.3rem;
     padding:0.5rem;
     }
+    .hero-text-container h1{
+        font-size:1.5rem;
+    }
 }
 
-@media only screen and (max-width:320px){
+@media only screen and (max-width:360px){
 
     .custom-toggler.navbar-toggler{
     font-size: 0.75rem;
@@ -197,9 +203,7 @@ h1, h2, h3, h4, h5{
     .navbar-container .nav-item a{
     font-size: 0.8rem;
     }
-    .hero-text-container h1{
-        font-size:2rem;
-    }
+
     
 
 }
