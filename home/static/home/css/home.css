@@ -13,7 +13,11 @@
     padding-top:11rem;
 }
 
-.btn-hero{
+
+/*---Buttons---*/
+
+.btn-hero,
+.btn-home{
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -23,7 +27,13 @@
     color:#ffec00;
 }
 
+.btn-home:hover{
+    background-color:rgb(44,44,43);
+    color:#ffec00;
+}
+
 /*----- Product Carosuel---*/
+
 /* Setup for product Carosuel came from
 https://stackoverflow.com/questions/20007610/bootstrap-carousel-multiple-frames-at-once */ 
 .carousel-inner .carousel-item.active,
@@ -93,7 +103,21 @@ https://stackoverflow.com/questions/20007610/bootstrap-carousel-multiple-frames-
     }
 }
 
+/*---- Classes Images ------*/
+.class-img-container{
+    width:33%;
+    margin:0;
+}
 
+.class-img{
+    max-height:100%;
+    max-width: 100%;  
+}
+
+.classes-txt{
+    font-size: 2em;
+    font-weight: bold;
+}
 /*---- Media Commands---*/
 @media only screen and (min-width: 1981px){
 
@@ -107,6 +131,11 @@ https://stackoverflow.com/questions/20007610/bootstrap-carousel-multiple-frames-
 
     .btn-hero{
         width:400px;
+        height:90px;
+        font-size: 3rem;
+    }
+    .btn-home{
+        width:450px;
         height:90px;
         font-size: 3rem;
     }
@@ -124,7 +153,21 @@ https://stackoverflow.com/questions/20007610/bootstrap-carousel-multiple-frames-
         font-size: 3rem;
     }
 
-    .btn-hero{
+    .btn-hero,
+    .btn-home{
+        width:300px;
+        height:70px;
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width:411px) and (max-width:1024px){
+    .btn-hero {
+        width:220px;
+        height:55px;
+        font-size: 1.6rem;
+    }
+    .btn-home{
         width:300px;
         height:70px;
         font-size: 2rem;
