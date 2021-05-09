@@ -1,0 +1,34 @@
+.category-link-container{
+    position: relative;
+    text-align: center;
+}
+
+
+
+.link-img{
+    filter: brightness(80%);
+    object-fit: cover;
+    height: 230px;  
+}
+#clearance-img{
+    width:345.14px;
+}
+.link-text{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size:2em;
+    font-weight: bold;
+    text-shadow: 1px 1px #0a0a0a;
+}
+
+.product-card a img{
+    object-fit: cover;
+    height:400px;
+}
+
+.product-card{
+    width:90%;
+    margin:auto 1rem;
+}

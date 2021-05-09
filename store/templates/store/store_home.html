@@ -1,11 +1,119 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'store/css/store.css' %}">
+{% endblock %}
+
 {% block extra_title %}Store{% endblock %}
 {% block extra_hero_text_after %}
 <h1 class="text-center main-title">Store</h1>
 {% endblock %}
 
 {% block content %}
-
+<div class="container-fluid d-none d-md-block my-3 mx-auto">
+    <div class="row">
+        <div class="col-xl-3 col-md-6 my-2 my-xl-0 category-link-container">
+            <a href=""><img src="{% static 'store/images/gym_supplements.jpg'%}" alt="Image of gym supplements"
+                    class="link-img">
+                <div class="link-text yellow-txt-color">Supplements</div>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 my-2 my-xl-0 category-link-container">
+            <a href=""><img src="{% static 'store/images/gym_clothing.jpg'%}" alt="Image of gym clothing"
+                    class="link-img">
+                <div class="link-text yellow-txt-color">Clothing</div>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 category-link-container">
+            <a href=""><img src="{% static 'store/images/gym_accessories.jpg'%}" alt="Image of gym accessories"
+                    class="link-img">
+                <div class="link-text yellow-txt-color">Accessories</div>
+            </a>
+        </div>
+        <div class="col-xl-3 col-md-6 category-link-container">
+            <a href=""><img src="{% static 'store/images/clearance.jpg'%}" alt="Image of clearnace icon"
+                    class="link-img" id="clearance-img">
+                <div class="link-text yellow-txt-color">Clearance</div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-12">
+            <h2 class="section-heading my-4">All Products</h1>
+                <hr class="short-hr">
+        </div>
+        <div class="col-12 offset-md-2 col-md-8 offset-xl-4 col-xl-4 mb-3">
+            <form method="GET" action="">
+                <div class="input-group w-100">
+                    <input class="form-control border border-black rounded-0" type="text" name="q"
+                        placeholder="Search our site">
+                    <div class="input-group-append">
+                        <button class="form-control btn border border-black rounded" type="submit">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container mx-auto">
+    {% include 'includes/shop_nav.html' %}
+</div>
+<div class="container-fluid">
+    <div class="row">
+        {% for product in products %}
+            <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 product-container my-3">
+                <div class="card product-card border-1">
+                        {% if product.image %}
+                        <a href="">
+                            <img class="card-img-top img-fluid border" src="{{ product.image.url }}" alt="{{ product.name }}">
+                        </a>
+                        {% else %}
+                        <a href="">
+                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                alt="{{ product.name }}">
+                        </a>
+                        {% endif %}
+                        <div class="card-body border-dark pb-0">
+                            <p class="mb-0">{{ product.name }}</p>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                    {% if product.category %}
+                                    <p class="small mt-1 mb-0">
+                                        <a href=""
+                                            class="text-muted">
+                                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                        </a>
+                                    </p>
+                                    {% endif %}
+                                    {% if product.rating %}
+                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                        5</small>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="">Edit</a> |
+                                        <a class="text-danger" href="">Delete</a>
+                                    </small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+        {% endfor %}
+        </div>
+    </div>
+</div>
 {% endblock %}
