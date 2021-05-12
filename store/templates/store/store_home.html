@@ -46,7 +46,7 @@
                 <hr class="short-hr">
         </div>
         <div class="col-12 offset-md-2 col-md-8 offset-xl-4 col-xl-4 mb-3">
-            <form method="GET" action="">
+            <form method="GET" action="{% url 'store' %}">
                 <div class="input-group w-100">
                     <input class="form-control border border-black rounded-0" type="text" name="q"
                         placeholder="Search our site">
@@ -71,11 +71,11 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 product-container my-3">
                 <div class="card product-card border-1">
                         {% if product.image %}
-                        <a href="">
+                        <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid border" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
-                        <a href="">
+                        <a href="{% url 'product_detail' product.id %}">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
                                 alt="{{ product.name }}">
                         </a>
