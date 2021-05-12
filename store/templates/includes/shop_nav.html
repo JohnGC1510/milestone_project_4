@@ -44,9 +44,9 @@
                     All Products
                 </a>
                 <div class="dropdown-menu border-0" aria-labelledby="allproducts-link">
-                    <a href="" class="dropdown-item yellow-txt-color">By Price</a>
-                    <a href="" class="dropdown-item yellow-txt-color">By Rating</a>
-                    <a href="" class="dropdown-item yellow-txt-color">By Categroy</a>
+                    <a href="{% url 'store' %}?sort=price&direction=asc" class="dropdown-item yellow-txt-color">By Price</a>
+                    <a href="{% url 'store' %}?sort=rating&direction=desc" class="dropdown-item yellow-txt-color">By Rating</a>
+                    <a href="{% url 'store' %}?sort=category&direction=asc" class="dropdown-item yellow-txt-color">By Categroy</a>
                     <a href="{% url 'store' %}?category=clearance" class="dropdown-item yellow-txt-color">Clearance Items</a>
                 </div>
              </div>
