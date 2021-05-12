@@ -5,7 +5,9 @@
             {% for product in products %}
             <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
                 <div class="col-12 col-sm-6 col-md-4 col-lg-2">
-                    <img class="img-fluid carousel-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img class="img-fluid carousel-img" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
                 </div>
             </div>
             {% endfor %}

@@ -1,15 +1,22 @@
 from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product
+from .models import Product, Category
 
 
 def store_home(request):
-    """ A view to return the home page"""
+    """ A view to return the store page"""
     template = 'store/store_home.html'
     query = None
+    categories = None
 
     products = Product.objects.all()
+
+    if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            products = products.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
     if request.GET:
         if 'q' in request.GET:
@@ -24,6 +31,7 @@ def store_home(request):
     context = {
         'products': products,
         'search_term': query,
+        'current_categories': categories,
     }
 
     return render(request, template, context)

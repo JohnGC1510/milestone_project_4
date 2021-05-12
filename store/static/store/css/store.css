@@ -4,15 +4,16 @@
 }
 
 
-
 .link-img{
     filter: brightness(80%);
     object-fit: cover;
     height: 230px;  
 }
-#clearance-img{
-    width:345.14px;
+
+.link-img:hover{
+    filter:brightness(50%);
 }
+
 .link-text{
     position: absolute;
     top:50%;
@@ -21,6 +22,7 @@
     font-size:2em;
     font-weight: bold;
     text-shadow: 1px 1px #0a0a0a;
+    z-index:2;
 }
 
 .product-card a img{

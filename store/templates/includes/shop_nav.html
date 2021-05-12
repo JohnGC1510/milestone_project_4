@@ -5,10 +5,10 @@
                     Supplements
                 </a>
                 <div class="dropdown-menu border-0" aria-labelledby="supplements-link">
-                    <a href="" class="dropdown-item yellow-txt-color">Protein</a>
-                    <a href="" class="dropdown-item yellow-txt-color">Pre-workout</a>
-                    <a href="" class="dropdown-item yellow-txt-color">Vitamins</a>
-                    <a href="" class="dropdown-item yellow-txt-color">All Supplements</a>
+                    <a href="{% url 'store' %}?category=protein" class="dropdown-item yellow-txt-color">Protein</a>
+                    <a href="{% url 'store' %}?category=pre_workout" class="dropdown-item yellow-txt-color">Pre-workout</a>
+                    <a href="{% url 'store' %}?category=vitamins" class="dropdown-item yellow-txt-color">Vitamins</a>
+                    <a href="{% url 'store' %}?category=protein,pre_workout,vitamins" class="dropdown-item yellow-txt-color">All Supplements</a>
                 </div>
         </div>     
 
@@ -18,10 +18,10 @@
                     Clothes
                 </a>
                 <div class="dropdown-menu border-0" aria-labelledby="clothes-link">
-                    <a href="" class="dropdown-item yellow-txt-color">Tanks</a>
-                    <a href="" class="dropdown-item yellow-txt-color">t-shirts</a>
-                    <a href="" class="dropdown-item yellow-txt-color">Hoodies</a>
-                    <a href="" class="dropdown-item yellow-txt-color">All clothes</a>
+                    <a href="{% url 'store' %}?category=vests" class="dropdown-item yellow-txt-color">Tanks</a>
+                    <a href="{% url 'store' %}?category=t_shirts" class="dropdown-item yellow-txt-color">t-shirts</a>
+                    <a href="{% url 'store' %}?category=hoodies" class="dropdown-item yellow-txt-color">Hoodies</a>
+                    <a href="{% url 'store' %}?category=vests,t_shirts,hoodies" class="dropdown-item yellow-txt-color">All clothes</a>
                 </div>
         </div>
 
@@ -31,10 +31,10 @@
                     Belts & Wraps
                 </a>
                 <div class="dropdown-menu border-0" aria-labelledby="accessories-link">
-                    <a href="" class="dropdown-item yellow-txt-color">Belts</a>
-                    <a href="" class="dropdown-item yellow-txt-color">Straps & Wraps</a>
-                    <a href="" class="dropdown-item yellow-txt-color">Chalk</a>
-                    <a href="" class="dropdown-item yellow-txt-color">All Accessories</a>
+                    <a href="{% url 'store' %}?category=belts" class="dropdown-item yellow-txt-color">Belts</a>
+                    <a href="{% url 'store' %}?category=straps_wraps" class="dropdown-item yellow-txt-color">Straps & Wraps</a>
+                    <a href="{% url 'store' %}?category=chalk" class="dropdown-item yellow-txt-color">Chalk</a>
+                    <a href="{% url 'store' %}?category=belts,straps_wraps,chalk" class="dropdown-item yellow-txt-color">All Accessories</a>
                 </div>
             </div>
 
@@ -47,7 +47,7 @@
                     <a href="" class="dropdown-item yellow-txt-color">By Price</a>
                     <a href="" class="dropdown-item yellow-txt-color">By Rating</a>
                     <a href="" class="dropdown-item yellow-txt-color">By Categroy</a>
-                    <a href="" class="dropdown-item yellow-txt-color">Clearance Items</a>
+                    <a href="{% url 'store' %}?category=clearance" class="dropdown-item yellow-txt-color">Clearance Items</a>
                 </div>
              </div>
     </div>
