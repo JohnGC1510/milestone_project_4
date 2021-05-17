@@ -131,7 +131,7 @@
                         
                     </li>
                     <li class="list-inline-item nav-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        <a class="nav-link"
                             href="{% url 'view_bag' %}"><i class="fas fa-shopping-cart fa-lg"></i>
                             </a>
                     </li>
@@ -147,25 +147,7 @@
             {% block header_call_to_action %}{% endblock %}
         </header>
     </div>
-    <!--
-    {% if messages %}
-        <div class="message-container">
-        {% for message in messages %}
-            {% with message.level as level %}
-                {% if level == 40 %}
-                    {% include 'includes/toasts/toast_error.html' %}
-                {% elif level == 30 %}
-                    {% include 'includes/toasts/toast_warning.html' %}
-                {% elif level == 25 %}
-                    {% include 'includes/toasts/toast_success.html' %}
-                {% else %}
-                    {% include 'includes/toasts/toast_info.html' %}
-                {% endif %}
-            {% endwith %}
-        {% endfor %}
-        </div>
-    {% endif %}
-    -->
+
     {% block page_header %}
     {% endblock %}
 
