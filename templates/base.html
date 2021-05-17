@@ -67,8 +67,8 @@
                         </div>
                     </li>
                     <li class="list-inline-item nav-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                            href="{% url 'view_bag' %}"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                        <a class="nav-link"
+                            href="{% url 'view_bag' %}"><i class="fas fa-shopping-cart fa-lg">{% if product_count > 0 %}<span id="product-count">{{ product_count }}</span>{% endif %}</i></a>
                     </li>
                 </div>
                 <nav class="navbar navbar-expand-xl d-inline-block">
@@ -97,7 +97,7 @@
                                     <a href="#" class="nav-link dropdown-item">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link dropdown-item">Store</a>
+                                    <a href="{% url 'store' %}" class="nav-link dropdown-item">Store</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link dropdown-item">Classes</a>
@@ -132,7 +132,7 @@
                     </li>
                     <li class="list-inline-item nav-item">
                         <a class="nav-link"
-                            href="{% url 'view_bag' %}"><i class="fas fa-shopping-cart fa-lg"></i>
+                            href="{% url 'view_bag' %}"><i class="fas fa-shopping-cart fa-lg">{% if product_count > 0 %}<span id="product-count">{{ product_count }}</span>{% endif %}</i>
                             </a>
                     </li>
                 </div>

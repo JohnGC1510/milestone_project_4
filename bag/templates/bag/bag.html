@@ -10,31 +10,31 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 text-center">
             <hr class="long-hr">
             <h2 class="section-header">Shopping Bag</h2>
             <hr class="long-hr">
         </div>
-        <div class="col-12 col-lg-6">
+        <div class="col-12 col-lg-6 offset-xl-2 col-xl-4">
             {% if bag_items %}
             {% for item in bag_items %}
             <div class="row my-1 bag-item-container">
-                <div class="col-8">
+                <div class="col-6">
                     {% if item.product.image %}
                     <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                     {% else %}
                     <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png">
                     {% endif %}
                 </div>
-                <div class="col-4 my-auto">
+                <div class="col-6 my-auto">
                     <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                     <p class="my-0">
-                        <strong>Size:</strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}
+                        <strong>Size:&nbsp;</strong>{% if item.product.has_size %}{{ item.size|upper }}{% else %}N/A{% endif %}
                     </p>
                     <p class="my-0">£{{ item.product.price }}</p>
                     <form class="form update-form" method="POST" action="{% url 'adjust_bag' item.item_id %}">
                         {% csrf_token %}
-                        <div class="form-group w-50">
+                        <div class="form-group w-80">
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                     <button class="decrement-qty btn btn-sm btn-black rounded-0"
@@ -55,7 +55,11 @@
                                         </span>
                                     </button>
                                 </div>
-                                {% if item.product.has_sizes %}
+                                <a class="update-link text-info"><small>Update</small></a>
+                                <a class="remove-item text-danger" id="remove_{{ item.item_id }}"
+                                data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                
+                                {% if item.product.has_size %}
                                 <input type="hidden" name="product_size" value="{{ item.size }}">
                                 {% endif %}
                             </div>
@@ -78,9 +82,51 @@
             </a>
             {% endif %}
         </div>
-        <div class="col-12 col-lg-6">
-
+        <div class="col-12 col-lg-6 col-xl-4 mt-5 mx-auto">
+            <h4>Total</h4>
+            <hr class="long-hr">
+            <p>Basket Total:<span class="float-right">£{{ total|floatformat:2 }}</spa</p>
+            <p>Membership Discount:<span class="float-right">£0.00</spa</p>
+            <p>Delivery:<span class="float-right">£{{ delivery|floatformat:2 }}</span></p>
+            <hr class="long-hr">
+            <p>Total:<span class="float-right">£{{ grand_total|floatformat:2 }}</spa</p>
+            <hr class="long-hr">
+            <a href="" class="btn btn-checkout yellow-bg-color black-txt-color btn-lg rounded">
+                <span class="text-uppercase">Secure Checkout</span>
+                <span class="icon">
+                        <i class="fas fa-lock"></i>
+                </span>
+            </a>
         </div>
     </div>
 </div>
+{% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'store/includes/quantity_input_script.html' %}
+
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function (e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function (e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var size = $(this).data('product_size');
+        var url = `/bag/remove/${itemId}/`;
+        var data = {
+            'csrfmiddlewaretoken': csrfToken,
+            'product_size': size
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
 {% endblock %}
