@@ -91,7 +91,7 @@
             <hr class="long-hr">
             <p>Total:<span class="float-right">£{{ grand_total|floatformat:2 }}</spa</p>
             <hr class="long-hr">
-            <a href="" class="btn btn-checkout yellow-bg-color black-txt-color btn-lg rounded">
+            <a href="{% url 'checkout' %}" class="btn btn-checkout yellow-bg-color black-txt-color btn-lg rounded">
                 <span class="text-uppercase">Secure Checkout</span>
                 <span class="icon">
                         <i class="fas fa-lock"></i>
