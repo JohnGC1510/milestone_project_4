@@ -206,20 +206,13 @@ if 'USE_AWS' in os.environ:
 
 FREE_DELIVERY_THRESHOLD = 500
 STANDARD_DELIVERY_PERCENTAGE = 5
-"""
-# stripe
-FREE_DELIVERY_THRESHOLD = 50
-STANDARD_DELIVERY_PERCENTAGE = 10
-STRIPE_CURRENCY = 'usd'
-if DEBUG:
-    STRIPE_PUBLIC_KEY = env('STRIPE_PUBLIC_KEY')
-    STRIPE_SECRET_KEY = env('STRIPE_SECRET_KEY')
-    STRIPE_WH_SECRET = env('STRIPE_WH_SECRET')
-else:
-    STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY')
-    STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY')
-    STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
+# stripe
+STRIPE_CURRENCY = 'gbp'
+STRIPE_PUBLIC_KEY = os.environ.get('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY','')
+"""
+STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET')
 
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
