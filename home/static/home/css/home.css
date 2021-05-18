@@ -160,7 +160,7 @@ https://stackoverflow.com/questions/20007610/bootstrap-carousel-multiple-frames-
 
     .btn-hero,
     .btn-home{
-        width:300px;
+        width:320px;
         height:70px;
         font-size: 2rem;
     }
@@ -184,7 +184,7 @@ https://stackoverflow.com/questions/20007610/bootstrap-carousel-multiple-frames-
     .btn-home{
         width:300px;
         height:70px;
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 }
 
