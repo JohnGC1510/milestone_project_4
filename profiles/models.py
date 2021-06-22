@@ -13,14 +13,14 @@ class UserProfile(models.Model):
     """
 
     member_types = (
-        (1, 'basic'),
+        (1, 'bronze'),
         (2, 'silver'),
         (3, 'gold')
     )
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     membership_type = models.PositiveSmallIntegerField(
-        choices=member_types, default='basic'
+        choices=member_types, default=1
         )
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)
     default_country = CountryField(blank_label='Country *', null=True, blank=True)

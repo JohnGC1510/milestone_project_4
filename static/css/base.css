@@ -216,6 +216,28 @@ h1, h2, h3, h4, h5{
     overflow-y: auto;
 }
 
+/*--------------- All Auth -------------*/
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+
+
 /*------ Media Commands -------*/
 @media only screen and (min-width:1025px) and (max-width:1440px){
     .hero-text-container{
