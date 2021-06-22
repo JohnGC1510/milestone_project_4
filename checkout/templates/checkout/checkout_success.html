@@ -58,5 +58,24 @@
             <p>Total:<span class="float-right">£{{ order.grand_total|floatformat:2 }}</span></p>
         </div>
     </div>
+    <div class="row">
+        <div class="col-12 col-lg-7 text-right">
+            {% if from_profile %}
+            <a href="{% url 'profile' %}" class="btn btn-submit rounded my-2">
+                <span class="icon mr-2">
+                    <i class="fas fa-angle-left"></i>
+                </span>
+                <span class="text-uppercase">Back to Profile</span>
+            </a>
+            {% else %}
+            <a href="{% url 'store' %}?category=clearance" class="btn btn-submit rounded my-5">
+                <span class="icon mr-2">
+                    <i class="fas fa-gifts"></i>
+                </span>
+                <span class="text-uppercase">Now check out the latest deals!</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
 </div>
 {% endblock %}
