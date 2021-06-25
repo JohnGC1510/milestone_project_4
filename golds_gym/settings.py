@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'profiles',
     'django_countries',
     'crispy_forms',
+    'classes',
 ]
 
 MIDDLEWARE = [
@@ -130,11 +131,8 @@ if 'DATABASE_URL' in os.environ:
     }
 else:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+        'default': dj_database_url.parse('postgres://wuelnmkowegyfh:29081faf54a12a650c716dc66887dbe936682b6542cff0e43524b08b83be88e5@ec2-54-74-156-137.eu-west-1.compute.amazonaws.com:5432/d3t9loi1bnsano')    
         }
-    }
 
 
 # Password validation

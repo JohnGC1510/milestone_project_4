@@ -1,0 +1,13 @@
+.card-container{
+    margin:25px auto;
+}
+
+.card{
+    max-width:20rem;
+    border: 1px solid #0f0f0f;
+    margin:0 auto;
+}
+
+.card-img-top{
+    height:200px;
+}

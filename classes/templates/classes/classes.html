@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'classes/css/classes.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Classes</h1>
+<div class="container-fluid">
+			<div class="row">
+				<div class="col-12 text-center">
+					<h2 class="uppercase classes-headings">Available Classes</h2>
+					<hr class="short-hr">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 offset-lg-3 col-lg-6 offset-lg-3 text-center">
+                    <!-- Change this text for members -->
+                    <p>Sign up to one of our classes today!</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12 col-sm-6 col-lg-4 card-container">
+					<div class="card">
+						<img class="card-img-top card-img" src="" alt="Image representing mobility class">
+						<div class="card-body text-center">
+							<h5>Mobility</h5>
+							<hr class="black-hr">
+                            <p class="card-text">
+								Our Mobility class is an hour of going through an extensive range of movements to improve flexibility and core strength and reduce risks of injury.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4 card-container">
+					<div class="card">
+						<img class="card-img-top card-img" src="" alt="Image representing log press class">
+						<div class="card-body text-center">
+							<h5>Log Press</h5>
+							<hr class="black-hr">
+                            <p class="card-text">
+								The log press class is a technical class focused on introducing/improving clients to using a strongman log and increasing their total log press.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4 card-container">
+					<div class="card">
+						<img class="card-img-top card-img" src="" alt="Image representing powerlifitng class">
+						<div class="card-body text-center">
+                            <h5>Powerlifting</h5>
+							<hr class="black-hr">
+                        	<p class="card-text">
+								The powerlifitng class focuses on the 3 key lifts - deadlifts, squats and bench and aims at improving your total in a group environment.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4 card-container">
+					<div class="card">
+						<img class="card-img-top card-img" src="" alt="Image representing crossfit class">
+						<div class="card-body text-center">
+							<h5>Crossfit</h5>
+							<hr class="black-hr">
+                            <p class="card-text">
+								The crossfit class is a high intensity interval training class with a focus on olympic lifting and body-weight movements. 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4 card-container">
+					<div class="card">
+						<img class="card-img-top card-img" src="" alt="Image representing boot-camp class">
+						<div class="card-body text-center">
+							<h5>Bootcamp</h5>
+							<hr class="black-hr">
+                            <p class="card-text">
+								The bootcamp class is a cardiovascular class which aims to improve your overall fitness with high intensity circuits. 
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-sm-6 col-lg-4 card-container">
+					<div class="card">
+						<img class="card-img-top card-img" src="" alt="Image representing atlas stones class">
+						<div class="card-body text-center">
+							<h5>Atlas Stones</h5>
+								<hr class="black-hr">
+                            <p class="card-text">
+								The Atlas stones class is a technical class that introduces you how to safely use and progess with this iconic equipment. 
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+{% endblock %}

@@ -1,3 +1,18 @@
 from django.db import models
+from django.contrib.postgres.fields import ArrayField
 
-# Create your models here.
+from profiles.models import UserProfile
+
+
+class Classes(models.Model):
+
+    name = models.CharField(max_length=254)
+    max_attending = models.IntegerField(default=12)
+    attending = ArrayField(models.CharField(max_length=50), default=list)
+    user = models.ForeignKey(
+        UserProfile, on_delete=models.SET_NULL, null=True,
+        blank=True
+        )
+
+    def __str__(self):
+        return self.name
