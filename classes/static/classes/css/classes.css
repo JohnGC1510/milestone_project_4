@@ -1,13 +1,29 @@
 .card-container{
-    margin:25px auto;
+    margin: 2em auto;
 }
 
 .card{
-    max-width:20rem;
+    max-width: 40rem;
     border: 1px solid #0f0f0f;
     margin:0 auto;
 }
 
-.card-img-top{
-    height:200px;
+.class-signup-btn{
+    background: none;
+    border:none;
+    outline:none;
+}
+
+.table td{
+    text-align: center;
+}
+
+.table td:hover{
+    background-color: rgba(0,0,0,.075);
+}
+
+.class-signup-btn:active,
+.class-signup-btn:focus{
+    outline:none;
+    border:none;
 }

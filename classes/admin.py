@@ -5,8 +5,9 @@ from .models import Classes
 class ClassesAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        #'max_attending',
-        #'user'
+        'max_attending',
+        'user',
+        'attending'
     )
 
 

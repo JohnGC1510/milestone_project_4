@@ -6,11 +6,10 @@
 {% endblock %}
 
 {% block content %}
-<h1>Classes</h1>
 <div class="container-fluid">
 			<div class="row">
 				<div class="col-12 text-center">
-					<h2 class="uppercase classes-headings">Available Classes</h2>
+					<h2 class="uppercase section-header my-3">Classes</h2>
 					<hr class="short-hr">
 				</div>
 			</div>
@@ -23,7 +22,7 @@
 			<div class="row">
 				<div class="col-12 col-sm-6 col-lg-4 card-container">
 					<div class="card">
-						<img class="card-img-top card-img" src="" alt="Image representing mobility class">
+						<img class="card-img-top card-img" src="{% static 'images/mobility_class.jpg' %}" alt="Image representing mobility class">
 						<div class="card-body text-center">
 							<h5>Mobility</h5>
 							<hr class="black-hr">
@@ -35,7 +34,7 @@
 				</div>
 				<div class="col-12 col-sm-6 col-lg-4 card-container">
 					<div class="card">
-						<img class="card-img-top card-img" src="" alt="Image representing log press class">
+						<img class="card-img-top card-img" src="{% static 'images/log_class.jpg' %}" alt="Image representing log press class">
 						<div class="card-body text-center">
 							<h5>Log Press</h5>
 							<hr class="black-hr">
@@ -47,7 +46,7 @@
 				</div>
 				<div class="col-12 col-sm-6 col-lg-4 card-container">
 					<div class="card">
-						<img class="card-img-top card-img" src="" alt="Image representing powerlifitng class">
+						<img class="card-img-top card-img" src="{% static 'images/deadlift_class.jpg' %}" alt="Image representing powerlifitng class">
 						<div class="card-body text-center">
                             <h5>Powerlifting</h5>
 							<hr class="black-hr">
@@ -59,7 +58,7 @@
 				</div>
 				<div class="col-12 col-sm-6 col-lg-4 card-container">
 					<div class="card">
-						<img class="card-img-top card-img" src="" alt="Image representing crossfit class">
+						<img class="card-img-top card-img" src="{% static 'images/crossfit_class.jpg' %}" alt="Image representing crossfit class">
 						<div class="card-body text-center">
 							<h5>Crossfit</h5>
 							<hr class="black-hr">
@@ -71,7 +70,7 @@
 				</div>
 				<div class="col-12 col-sm-6 col-lg-4 card-container">
 					<div class="card">
-						<img class="card-img-top card-img" src="" alt="Image representing boot-camp class">
+						<img class="card-img-top card-img" src="{% static 'images/bootcamp_class.jpg' %}" alt="Image representing boot-camp class">
 						<div class="card-body text-center">
 							<h5>Bootcamp</h5>
 							<hr class="black-hr">
@@ -83,7 +82,7 @@
 				</div>
 				<div class="col-12 col-sm-6 col-lg-4 card-container">
 					<div class="card">
-						<img class="card-img-top card-img" src="" alt="Image representing atlas stones class">
+						<img class="card-img-top card-img" src="{% static 'images/stones_class.jpg' %}" alt="Image representing atlas stones class">
 						<div class="card-body text-center">
 							<h5>Atlas Stones</h5>
 								<hr class="black-hr">
@@ -93,6 +92,72 @@
 						</div>
 					</div>
 				</div>
-			</div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                <h2 class="my-3">Available Classes</h2>
+                <hr class="short-hr">
+                </div>
+            <div class="col-12">    
+                <form action="{% url 'classes' %}" method="POST">
+                    {% csrf_token %}
+                    <table class="table table-bordered">
+						<thead>
+							<tr>
+								<th scope="col"></th>
+								<th scope="col">Monday</th>
+								<th scope="col">Tuesday</th>
+								<th scope="col">Wednesday</th>
+								<th scope="col">Thursday</th>
+								<th scope="col">Friday</th>
+								<th scope="col">Saturday</th>
+								<th scope="col">Sunday</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+                                <th scope="row">06:00-07:00</th>
+                                <td><button class="class-signup-btn" type="submit">Powerlifting</button></td>
+								
+							</tr>
+							<tr>
+								<th scope="row">07:00-08:00</th>
+								
+							</tr>
+							<tr>
+								<th scope="row">08:00-09:00</th>
+								
+							</tr>
+							<tr>
+								<th scope="row">13:00-14:00</th>
+								
+							</tr>
+							<tr>
+								<th scope="row">14:00-15:00</th>
+								
+							</tr>
+							<tr>
+								<th scope="row">15:00-16:00</th>
+								
+							</tr>
+							<tr>
+								<th scope="row">18:00-19:00</th>
+								
+							</tr>
+							<tr>
+								<th scope="row">19:00-20:00</th>
+								
+							</tr>
+							<tr>
+								<th scope="row">20:00-21:00</th>
+							</tr>
+						</tbody>
+					</table>
+                </form>
+                </div>
+
+            </div>
+        </div>
+            
 
 {% endblock %}
