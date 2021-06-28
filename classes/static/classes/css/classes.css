@@ -28,6 +28,13 @@
     border:none;
 }
 
+.key-button{
+    font-weight:bold;
+    width:8rem;
+    margin: 1rem;
+
+}
+
 .yellow-bg{
     background-color: yellow;
 }
