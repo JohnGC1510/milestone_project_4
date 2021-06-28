@@ -1,12 +1,16 @@
 from django.shortcuts import render, redirect, reverse
+from .models import Classes
 
 
 def classes(request):
     """ A view to return the about_us page"""
 
-    if request.method == 'POST':
-        return redirect(reverse('classes'))
+    classes = Classes.objects.all()
 
     template = 'classes/classes.html'
 
-    return render(request, template)
+    context = {
+        'classes': classes
+    }
+
+    return render(request, template, context)

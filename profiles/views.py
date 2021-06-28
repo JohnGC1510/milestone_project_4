@@ -5,6 +5,7 @@ from .models import UserProfile
 from .forms import UserProfileForm
 
 from checkout.models import Order
+from classes.models import Classes
 
 
 @login_required
@@ -23,7 +24,21 @@ def profile(request):
     
     orders = profile.orders.all()
 
+    classes = Classes.objects.all()
+
+    username = profile.user.username
+
+    classes_list = []
+    
+    for c in classes:
+        for user in c.attending:
+            if user == username:
+                class_info = [c.name, c.class_day, c.class_time]
+                classes_list.append(class_info)
+
+
     template = 'profiles/profile.html'
+
     context = {
         'profile': profile,
         'form': form,

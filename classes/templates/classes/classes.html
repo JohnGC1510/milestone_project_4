@@ -98,10 +98,9 @@
                 <h2 class="my-3">Available Classes</h2>
                 <hr class="short-hr">
                 </div>
-            <div class="col-12">    
-                <form action="{% url 'classes' %}" method="POST">
-                    {% csrf_token %}
-                    <table class="table table-bordered">
+
+            <div class="col-12">   
+                <table class="table table-bordered">
 						<thead>
 							<tr>
 								<th scope="col"></th>
@@ -115,45 +114,210 @@
 							</tr>
 						</thead>
 						<tbody>
+                           
 							<tr>
-                                <th scope="row">06:00-07:00</th>
-                                <td><button class="class-signup-btn" type="submit">Powerlifting</button></td>
+                            
+                                    <th scope="row">06:00-07:00</th>
+                            {% for class in classes %}
+                                    {% if class.class_day == "Monday" and class.class_time == "06:00-07:00" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Tuesday" and class.class_time == "06:00-07:00" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Wednesday" and class.class_time == "06:00-07:00" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Thursday" and class.class_time == "06:00-07:00" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Friday" and class.class_time == "06:00-07:00" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Saturday" and class.class_time == "06:00-07:00" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                   {% if class.class_day == "Sunday" and class.class_time == "06:00-07:00" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                            {% endfor %}	
+							</tr>
+							<tr>
+                                <th scope="row">07:00-08:00</th>
+                            {% for class in classes %}
+                                {% if class.class_time == "07:00-08:00" %}
+                                    {% if class.class_day == "Monday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Tuesday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Wednesday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Thursday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Friday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Saturday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                   {% if class.class_day == "Sunday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}	
 								
 							</tr>
 							<tr>
-								<th scope="row">07:00-08:00</th>
+                                <th scope="row">08:00-09:00</th>
+                                {% for class in classes %}
+                                {% if class.class_time == "08:00-09:00" %}
+                                    {% if class.class_day == "Monday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Tuesday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Wednesday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Thursday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Friday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Saturday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                   {% if class.class_day == "Sunday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
 								
 							</tr>
 							<tr>
-								<th scope="row">08:00-09:00</th>
+                                <th scope="row">13:00-14:00</th>
+                                {% for class in classes %}
+                                {% if class.class_time == "13:00-14:00" %}
+                                    {% if class.class_day == "Monday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Tuesday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Wednesday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Thursday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Friday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Saturday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                   {% if class.class_day == "Sunday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
 								
 							</tr>
 							<tr>
-								<th scope="row">13:00-14:00</th>
+                                <th scope="row">14:00-15:00</th>
+                                {% for class in classes %}
+                                {% if class.class_time == "14:00-15:00" %}
+                                    {% if class.class_day == "Monday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Tuesday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Wednesday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Thursday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Friday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Saturday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                   {% if class.class_day == "Sunday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
 								
 							</tr>
 							<tr>
-								<th scope="row">14:00-15:00</th>
+                                <th scope="row">15:00-16:00</th>
+                                {% for class in classes %}
+                                {% if class.class_time == "15:00-16:00" %}
+                                    {% if class.class_day == "Monday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Tuesday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Wednesday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Thursday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Friday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Saturday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                   {% if class.class_day == "Sunday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
 								
 							</tr>
 							<tr>
-								<th scope="row">15:00-16:00</th>
+                                <th scope="row">18:00-19:00</th>
+                                {% for class in classes %}
+                                {% if class.class_time == "18:00-19:00" %}
+                                    {% if class.class_day == "Monday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Tuesday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Wednesday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Thursday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Friday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                    {% if class.class_day == "Saturday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                   {% if class.class_day == "Sunday" %}
+                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
 								
-							</tr>
-							<tr>
-								<th scope="row">18:00-19:00</th>
-								
-							</tr>
-							<tr>
-								<th scope="row">19:00-20:00</th>
-								
-							</tr>
-							<tr>
-								<th scope="row">20:00-21:00</th>
 							</tr>
 						</tbody>
 					</table>
-                </form>
                 </div>
 
             </div>

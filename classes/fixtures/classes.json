@@ -1,0 +1,498 @@
+[{
+    "pk": 1,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Monday",
+        "class_time": "06:00-07:00"
+    }
+}, 
+{   "pk": 2,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Tuesday",
+        "class_time": "06:00-07:00"
+    } 
+},
+{   "pk": 3,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Wednesday",
+        "class_time": "06:00-07:00"
+    } 
+},
+{   "pk": 4,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Thursday",
+        "class_time": "06:00-07:00"
+    } 
+},
+{   "pk": 5,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Friday",
+        "class_time": "06:00-07:00"
+    } 
+},
+{   "pk": 6,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Saturday",
+        "class_time": "06:00-07:00"
+    } 
+},
+{   "pk": 7,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Sunday",
+        "class_time": "06:00-07:00"
+    } 
+},
+{
+    "pk": 8,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Monday",
+        "class_time": "07:00-08:00"
+    }
+}, 
+{   "pk": 9,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Tuesday",
+        "class_time": "07:00-08:00"
+    } 
+},
+{   "pk": 10,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Wednesday",
+        "class_time": "07:00-08:00"
+    } 
+},
+{   "pk": 11,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Thursday",
+        "class_time": "07:00-08:00"
+    } 
+},
+{   "pk": 12,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Friday",
+        "class_time": "07:00-08:00"
+    } 
+},
+{   "pk": 13,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Saturday",
+        "class_time": "07:00-08:00"
+    } 
+},
+{   "pk": 14,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Sunday",
+        "class_time": "07:00-08:00"
+    } 
+},
+{
+    "pk": 15,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Monday",
+        "class_time": "08:00-09:00"
+    }
+}, 
+{   "pk": 16,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Tuesday",
+        "class_time": "08:00-09:00"
+    } 
+},
+{   "pk": 17,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Wednesday",
+        "class_time": "08:00-09:00"
+    } 
+},
+{   "pk": 18,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Thursday",
+        "class_time": "08:00-09:00"
+    } 
+},
+{   "pk": 19,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Friday",
+        "class_time": "08:00-09:00"
+    } 
+},
+{   "pk": 20,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Saturday",
+        "class_time": "08:00-09:00"
+    } 
+},
+{   "pk": 21,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Sunday",
+        "class_time": "08:00-09:00"
+    } 
+},
+{
+    "pk": 22,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Monday",
+        "class_time": "13:00-14:00"
+    }
+}, 
+{   "pk": 23,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Tuesday",
+        "class_time": "13:00-14:00"
+    } 
+},
+{   "pk": 24,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Wednesday",
+        "class_time": "13:00-14:00"
+    } 
+},
+{   "pk": 25,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Thursday",
+        "class_time": "13:00-14:00"
+    } 
+},
+{   "pk": 26,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Friday",
+        "class_time": "13:00-14:00"
+    } 
+},
+{   "pk": 27,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Saturday",
+        "class_time": "13:00-14:00"
+    } 
+},
+{   "pk": 28,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Sunday",
+        "class_time": "13:00-14:00"
+    } 
+},
+{
+    "pk": 29,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Monday",
+        "class_time": "14:00-15:00"
+    }
+}, 
+{   "pk": 30,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Tuesday",
+        "class_time": "14:00-15:00"
+    } 
+},
+{   "pk": 31,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Wednesday",
+        "class_time": "14:00-15:00"
+    } 
+},
+{   "pk": 32,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Thursday",
+        "class_time": "14:00-15:00"
+    } 
+},
+{   "pk": 33,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Friday",
+        "class_time": "14:00-15:00"
+    } 
+},
+{   "pk": 34,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Saturday",
+        "class_time": "14:00-15:00"
+    } 
+},
+{   "pk": 35,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Sunday",
+        "class_time": "14:00-15:00"
+    } 
+},
+{
+    "pk": 36,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Monday",
+        "class_time": "15:00-16:00"
+    }
+}, 
+{   "pk": 37,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Tuesday",
+        "class_time": "15:00-16:00"
+    } 
+},
+{   "pk": 38,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Wednesday",
+        "class_time": "15:00-16:00"
+    } 
+},
+{   "pk": 39,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Thursday",
+        "class_time": "15:00-16:00"
+    } 
+},
+{   "pk": 40,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Friday",
+        "class_time": "15:00-16:00"
+    } 
+},
+{   "pk": 41,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Saturday",
+        "class_time": "15:00-16:00"
+    } 
+},
+{   "pk": 42,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Sunday",
+        "class_time": "15:00-16:00"
+    } 
+},
+{
+    "pk": 43,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Monday",
+        "class_time": "18:00-19:00"
+    }
+}, 
+{   "pk": 44,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Tuesday",
+        "class_time": "18:00-19:00"
+    } 
+},
+{   "pk": 45,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Wednesday",
+        "class_time": "18:00-19:00"
+    } 
+},
+{   "pk": 46,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Thursday",
+        "class_time": "18:00-19:00"
+    } 
+},
+{   "pk": 47,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Friday",
+        "class_time": "18:00-19:00"
+    } 
+},
+{   "pk": 48,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Saturday",
+        "class_time": "18:00-19:00"
+    } 
+},
+{   "pk": 49,
+    "model": "classes.classes",
+    "fields": {
+        "name": "Powerlifting",
+        "max_attending": 12,
+        "attending":[],
+        "class_day": "Sunday",
+        "class_time": "18:00-19:00"
+    } 
+}
+]
