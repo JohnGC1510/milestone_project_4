@@ -3,13 +3,17 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from store.models import Product
 
+from profiles.models import UserProfile
+
 
 def bag_contents(request):
 
     bag_items = []
     total = 0
     product_count = 0
+    member_discount = 0
     bag = request.session.get('bag', {})
+    gold_member = False
 
     for item_id, item_data in bag.items():
         if isinstance(item_data, int):
@@ -33,20 +37,32 @@ def bag_contents(request):
                     'size': size,
                 })
 
-    if total < settings.FREE_DELIVERY_THRESHOLD:
+    if request.user.is_authenticated:
+        profile = get_object_or_404(UserProfile, user=request.user)
+        if profile.membership_type == 3:
+            gold_member = True
+
+    if gold_member:
+        delivery = 0
+        free_delivery_delta = 0
+    elif total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
     else:
         delivery = 0
         free_delivery_delta = 0
 
-    grand_total = delivery + total
+    if gold_member:
+        member_discount = Decimal(settings.MEMBERSHIP_DISCOUNT/100) * total
+
+    grand_total = delivery + total - member_discount
 
     context = {
         'bag_items': bag_items,
         'total': total,
         'product_count': product_count,
         'delivery': delivery,
+        'member_discount': member_discount,
         'free_delivery_delta': free_delivery_delta,
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
