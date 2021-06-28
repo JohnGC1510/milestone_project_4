@@ -59,7 +59,16 @@ def checkout(request):
             for item_id, item_data in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    # if product.type == subscription
+
+                    if product.pk == 22:
+                        profile = UserProfile.objects.get(user=request.user)
+                        profile.membership_type = 3
+                        profile.save()
+                    elif product.pk == 21:
+                        profile = UserProfile.objects.get(user=request.user)
+                        profile.membership_type = 2
+                        profile.save()
+                    
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,

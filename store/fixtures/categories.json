@@ -68,4 +68,12 @@
         "name": "straps_wraps",
         "friendly_name": "Straps & Wraps"
     }
+},
+{
+    "pk": 11,
+    "model": "store.category",
+    "fields": {
+        "name": "membership",
+        "friendly_name": "Membership"
+    }
 }]

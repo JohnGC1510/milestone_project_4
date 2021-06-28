@@ -17,6 +17,8 @@ def store_home(request):
 
     products = Product.objects.all()
 
+    products = products.exclude(category=11)
+
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -68,6 +70,25 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
+    }
+
+    return render(request, template, context)
+
+
+def membership(request):
+
+    purchase = False
+    
+    if request.user.is_authenticated:
+        purchase = True
+
+    member_types = Product.objects.filter(category=11)
+
+    template = 'store/membership.html'
+
+    context = {
+        'member_types': member_types,
+        'purchase': purchase
     }
 
     return render(request, template, context)

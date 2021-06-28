@@ -5,6 +5,8 @@ from django.dispatch import receiver
 
 from django_countries.fields import CountryField
 
+from classes.models import Classes
+
 
 class UserProfile(models.Model):
     """
@@ -22,6 +24,7 @@ class UserProfile(models.Model):
     membership_type = models.PositiveSmallIntegerField(
         choices=member_types, default=1
         )
+    classes = models.ForeignKey(Classes, null=True, blank=True, on_delete=models.SET_NULL)
     default_phone_number = models.CharField(max_length=20, null=True, blank=True)
     default_country = CountryField(blank_label='Country *', null=True, blank=True)
     default_postcode = models.CharField(max_length=20, null=True, blank=True)

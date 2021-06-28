@@ -258,4 +258,29 @@
         "image_url": "https://www.strengthshop.co.uk/media/catalog/product/cache/f5c5a81670b99358961f461bdf85442d/i/n/inferno-knee-wraps.jpg",
         "image": "wraps-1.jpg"
     }
+},
+{
+    "pk": 21,
+    "model": "store.product",
+    "fields": {
+        "name": "Silver Membership",
+        "description": "Purchase silver level membership to the gym and receive access to all our great facilites and the able to book classes!",
+        "price": 249.99,
+        "has_size":false,
+        "category": 11,
+        "image_url": "",
+        "image": "silver.jpg"
+    }
+},{
+    "pk": 22,
+    "model": "store.product",
+    "fields": {
+        "name": "Gold Membership",
+        "description": "Purchase gold level membership to get all of the benefits of silver plus free delivery on all store orders and an exclusive 10% discount on all products!",
+        "price": 349.99,
+        "has_size":false,
+        "category": 11,
+        "image_url": "",
+        "image": "gold.jpg"
+    }
 } ]

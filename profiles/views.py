@@ -21,7 +21,7 @@ def profile(request):
             messages.success(request, 'Profile updated successfully')
     else:
         form = UserProfileForm(instance=profile)
-    
+
     orders = profile.orders.all()
 
     classes = Classes.objects.all()
@@ -29,7 +29,7 @@ def profile(request):
     username = profile.user.username
 
     classes_list = []
-    
+
     for c in classes:
         for user in c.attending:
             if user == username:
