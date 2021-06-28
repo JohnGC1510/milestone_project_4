@@ -4,11 +4,12 @@ from .models import Classes
 
 class ClassesAdmin(admin.ModelAdmin):
     list_display = (
+        'pk',
         'name',
         'max_attending',
-        'user',
         'attending'
     )
 
+    ordering = ('pk',)
 
 admin.site.register(Classes, ClassesAdmin)

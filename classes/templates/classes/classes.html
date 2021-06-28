@@ -118,28 +118,31 @@
 							<tr>
                             
                                     <th scope="row">06:00-07:00</th>
-                            {% for class in classes %}
-                                    {% if class.class_day == "Monday" and class.class_time == "06:00-07:00" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    
+                             {% for class in classes %}
+                                {% if class.class_time == "06:00-07:00" %}
+                                    {% if class.class_day == "Monday" %}
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
-                                    {% if class.class_day == "Tuesday" and class.class_time == "06:00-07:00" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% if class.class_day == "Tuesday" %}
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
-                                    {% if class.class_day == "Wednesday" and class.class_time == "06:00-07:00" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% if class.class_day == "Wednesday" %}
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
-                                    {% if class.class_day == "Thursday" and class.class_time == "06:00-07:00" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% if class.class_day == "Thursday" %}
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
-                                    {% if class.class_day == "Friday" and class.class_time == "06:00-07:00" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% if class.class_day == "Friday" %}
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
-                                    {% if class.class_day == "Saturday" and class.class_time == "06:00-07:00" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    {% if class.class_day == "Saturday" %}
+                                    <td class="{% if class.pk in user_classes  %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
-                                   {% if class.class_day == "Sunday" and class.class_time == "06:00-07:00" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                   {% if class.class_day == "Sunday" %}
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
+                                {% endif %}
                             {% endfor %}	
 							</tr>
 							<tr>
@@ -147,25 +150,25 @@
                             {% for class in classes %}
                                 {% if class.class_time == "07:00-08:00" %}
                                     {% if class.class_day == "Monday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Tuesday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Wednesday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Thursday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Friday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Saturday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                    {% if class.class_day == "Sunday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}	
@@ -175,26 +178,26 @@
                                 <th scope="row">08:00-09:00</th>
                                 {% for class in classes %}
                                 {% if class.class_time == "08:00-09:00" %}
-                                    {% if class.class_day == "Monday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+{% if class.class_day == "Monday" %}
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Tuesday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Wednesday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Thursday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Friday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Saturday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                    {% if class.class_day == "Sunday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
@@ -205,25 +208,25 @@
                                 {% for class in classes %}
                                 {% if class.class_time == "13:00-14:00" %}
                                     {% if class.class_day == "Monday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Tuesday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Wednesday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Thursday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Friday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Saturday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                    {% if class.class_day == "Sunday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
@@ -234,25 +237,25 @@
                                 {% for class in classes %}
                                 {% if class.class_time == "14:00-15:00" %}
                                     {% if class.class_day == "Monday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Tuesday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Wednesday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Thursday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Friday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Saturday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                    {% if class.class_day == "Sunday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
@@ -263,25 +266,25 @@
                                 {% for class in classes %}
                                 {% if class.class_time == "15:00-16:00" %}
                                     {% if class.class_day == "Monday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Tuesday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Wednesday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Thursday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Friday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Saturday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                    {% if class.class_day == "Sunday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
@@ -292,25 +295,25 @@
                                 {% for class in classes %}
                                 {% if class.class_time == "18:00-19:00" %}
                                     {% if class.class_day == "Monday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Tuesday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Wednesday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Thursday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Friday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                     {% if class.class_day == "Saturday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                    {% if class.class_day == "Sunday" %}
-                                    <td><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}">{{ class.name }}</button></td>
+                                    <td class="{% if class.pk in user_classes %} green-bg {% elif class.attending|length == class.max_attending %} red-bg {% else %} yellow-bg {% endif%}"><button type="submit" class="class-signup-btn" data-classId="{{ class.pk }}" data-color="{% if class.pk in user_classes %}green{% else %}yellow{% endif%}">{{ class.name }}</button></td>
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
@@ -324,4 +327,9 @@
         </div>
             
 
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+    <script src="{% static 'classes/js/classes.js' %}"></script>
 {% endblock %}

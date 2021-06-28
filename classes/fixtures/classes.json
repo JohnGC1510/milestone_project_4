@@ -2,7 +2,7 @@
     "pk": 1,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Mobility",
         "max_attending": 12,
         "attending":[],
         "class_day": "Monday",
@@ -22,7 +22,7 @@
 {   "pk": 3,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Crossfit",
         "max_attending": 12,
         "attending":[],
         "class_day": "Wednesday",
@@ -32,7 +32,7 @@
 {   "pk": 4,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Atlas Stones",
         "max_attending": 12,
         "attending":[],
         "class_day": "Thursday",
@@ -42,7 +42,7 @@
 {   "pk": 5,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Log Press",
         "max_attending": 12,
         "attending":[],
         "class_day": "Friday",
@@ -52,7 +52,7 @@
 {   "pk": 6,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Bootcamp",
         "max_attending": 12,
         "attending":[],
         "class_day": "Saturday",
@@ -62,7 +62,7 @@
 {   "pk": 7,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Bootcamp",
         "max_attending": 12,
         "attending":[],
         "class_day": "Sunday",
@@ -73,7 +73,7 @@
     "pk": 8,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Bootcamp",
         "max_attending": 12,
         "attending":[],
         "class_day": "Monday",
@@ -83,7 +83,7 @@
 {   "pk": 9,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Mobility",
         "max_attending": 12,
         "attending":[],
         "class_day": "Tuesday",
@@ -93,7 +93,7 @@
 {   "pk": 10,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Crossfit",
         "max_attending": 12,
         "attending":[],
         "class_day": "Wednesday",
@@ -103,7 +103,7 @@
 {   "pk": 11,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Bootcamp",
         "max_attending": 12,
         "attending":[],
         "class_day": "Thursday",
@@ -123,7 +123,7 @@
 {   "pk": 13,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Crossfit",
         "max_attending": 12,
         "attending":[],
         "class_day": "Saturday",
@@ -133,7 +133,7 @@
 {   "pk": 14,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Log Press",
         "max_attending": 12,
         "attending":[],
         "class_day": "Sunday",
@@ -154,7 +154,7 @@
 {   "pk": 16,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Crossfit",
         "max_attending": 12,
         "attending":[],
         "class_day": "Tuesday",
@@ -468,7 +468,7 @@
 {   "pk": 47,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Log Press",
         "max_attending": 12,
         "attending":[],
         "class_day": "Friday",
@@ -478,7 +478,7 @@
 {   "pk": 48,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Atlas Stones",
         "max_attending": 12,
         "attending":[],
         "class_day": "Saturday",
@@ -488,7 +488,7 @@
 {   "pk": 49,
     "model": "classes.classes",
     "fields": {
-        "name": "Powerlifting",
+        "name": "Atlas Stones",
         "max_attending": 12,
         "attending":[],
         "class_day": "Sunday",
