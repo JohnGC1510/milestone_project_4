@@ -1,7 +1,9 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
 from django.contrib import messages
 from django.views.decorators.csrf import csrf_exempt
+
 from .models import Classes
+from profiles.models import UserProfile
 
 import json
 
@@ -10,7 +12,8 @@ def classes(request):
     """ A view to return the about_us page"""
     user = request.user
     classes_attending = []
-    message = ""
+    message = None
+    profile = None
 
     if request.is_ajax and request.method == "POST":
         curr_class = Classes.objects.get(pk=request.POST.get("class_pk"))
@@ -32,6 +35,9 @@ def classes(request):
     classes = Classes.objects.all()
     classes = classes.order_by('pk')
 
+    if user.is_authenticated:
+        profile = get_object_or_404(UserProfile, user=request.user)
+    
     for c in classes:
         if user.username in c.attending:
             classes_attending.append(c.pk)
@@ -40,7 +46,8 @@ def classes(request):
 
     context = {
         'classes': classes,
-        'user_classes': classes_attending
+        'user_classes': classes_attending,
+        'profile': profile
     }
 
     return render(request, template, context)

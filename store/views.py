@@ -3,9 +3,10 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Product, Category
 from .forms import ProductForm
-
+from profiles.models import UserProfile
 
 def store_home(request):
     """ A view to return the store page"""
@@ -77,10 +78,13 @@ def product_detail(request, product_id):
 
 def membership(request):
 
+    profile=None
+
     purchase = False
     
     if request.user.is_authenticated:
         purchase = True
+        profile = get_object_or_404(UserProfile, user=request.user)
 
     member_types = Product.objects.filter(category=11)
 
@@ -88,7 +92,8 @@ def membership(request):
 
     context = {
         'member_types': member_types,
-        'purchase': purchase
+        'purchase': purchase,
+        'profile': profile
     }
 
     return render(request, template, context)

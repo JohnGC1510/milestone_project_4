@@ -15,8 +15,11 @@
 			</div>
 			<div class="row">
 				<div class="col-12 offset-lg-3 col-lg-6 offset-lg-3 text-center">
-                    <!-- Change this text for members -->
-                    <p>Sign up to one of our classes today!</p>
+                    {% if profile.membership_type == 2 or profile.membership_type == 3 %}
+                    <h6><strong>Below is a list of our available classes, use the table at the bottom of the page to sign up</strong></h6>
+                    {% else %}
+                    <h6><strong>Become a silver of gold member of the gym and sign up to one of our classes today!</strong></h6>
+                    {% endif %}
 				</div>
 			</div>
 			<div class="row">
@@ -92,7 +95,8 @@
 						</div>
 					</div>
 				</div>
-            </div>
+            </div> 
+            {% if profile.membership_type == 2 or profile.membership_type == 3 %}
             <div class="row">
                 <div class="col-12 text-center">
                 <h2 class="my-3">Available Classes</h2>
@@ -329,6 +333,7 @@
                 </div>
 
             </div>
+            {% endif %}
         </div>
             
 
