@@ -6,6 +6,7 @@ from .forms import UserProfileForm
 
 from checkout.models import Order
 from classes.models import Classes
+from store.models import Product, Favourite
 
 
 @login_required
@@ -13,6 +14,9 @@ def profile(request):
     """ Display user's profile """
 
     profile = get_object_or_404(UserProfile, user=request.user)
+    class_list= []
+    fav = None
+    fave_products = None
 
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
@@ -21,29 +25,32 @@ def profile(request):
             messages.success(request, 'Profile updated successfully')
     else:
         form = UserProfileForm(instance=profile)
+    
+    all_classes = Classes.objects.all()
 
-    orders = profile.orders.all()
-
-    classes = Classes.objects.all()
-
-    username = profile.user.username
-
-    classes_list = []
-
-    for c in classes:
-        for user in c.attending:
-            if user == username:
+    for c in all_classes:
+        for attendee in c.attending:
+            if str(request.user) == str(attendee):
                 class_info = [c.name, c.class_day, c.class_time]
-                classes_list.append(class_info)
+                class_list.append(class_info)
 
+    try:
+        favourites = Favourite.objects.get(userid=request.user)
+        fav = list(favourites.product_ids)
+    except Favourite.DoesNotExist:
+        favourites = Favourite(userid=request.user)
+        fav = list(favourites.product_ids)
+
+    fave_products = Product.objects.filter(id__in=fav)
 
     template = 'profiles/profile.html'
 
     context = {
         'profile': profile,
         'form': form,
-        'orders': orders,
-        'on_profile_page': True
+        'class_list': class_list,
+        'on_profile_page': True,
+        'fave_products': fave_products
     }
 
     return render(request, template, context)

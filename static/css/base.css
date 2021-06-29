@@ -113,7 +113,7 @@ h1, h2, h3, h4, h5{
 .navbar-container .nav-item a{
     color:#ffec00;
     font-size: 1.5rem;
-    padding-left: 15px;
+    padding-right: 15px;
     letter-spacing: 2px;
 }
 
