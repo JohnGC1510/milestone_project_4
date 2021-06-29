@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content%}
+    <section id="error404">
+        <div class="container text-center">
+            <h2>404 - Page Not Found</h2>
+            <p class="my-3">Oops! Seems the page you tried to access does not exist.</p>
+            <div class="my-3 text-center">
+                <a href="{% url 'home' %}" class="btn btn-submit">
+                    <i class="fas fa-chevron-left mr-2" aria-hidden="true"></i>
+                    Take me back!
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
