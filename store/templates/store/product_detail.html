@@ -101,7 +101,11 @@
                         {% else %}
                         <small class="text-muted">No Rating</small>
                      {% endif %}
-                     <a href="{% url 'add_favourite' product.id %}" class="btn btn-primary">Favourite</a>
+                     {% if product.id in fav_items %}
+                     <a href="{% url 'add_favourite' product.id %}" class=""><i class="fas fa-heart fa-2x ml-3 mt-2" id="favourite-icon"></i></a>
+                     {% else %}
+                     <a href="{% url 'add_favourite' product.id %}" class=""><i class="far fa-heart fa-2x ml-3 mt-2" id="favourite-icon"></i></a>
+                     {% endif %}
                     <p class="mt-3">
                          {{ product.description }}
                     </p>

@@ -67,11 +67,17 @@ def store_home(request):
 def product_detail(request, product_id):
     """ A view to show the individial product details """
     template = 'store/product_detail.html'
+    fav_items = None
 
     product = get_object_or_404(Product, pk=product_id)
 
+    if request.user.is_authenticated:
+        favs = get_object_or_404(Favourite, userid=request.user)
+        fav_items = list(favs.product_ids)
+
     context = {
         'product': product,
+        'fav_items': fav_items,
     }
 
     return render(request, template, context)
@@ -111,14 +117,17 @@ def add_favourite(request, product_id):
             if product_id in fav.product_ids:
                 fav.product_ids.remove(product_id)
                 fav.save()
+                messages.success(request, "Product removed from favoruties")
                 break
             else:
                 fav.product_ids.append(product_id)
                 fav.save()
+                messages.success(request, "Product added too favoruties")
                 break
         else:
             fav = Favourite(userid=request.user)
             fav.product_ids.append(product_id)
+            messages.success(request, "Product added too favoruties")
             fav.save()
             break
   
