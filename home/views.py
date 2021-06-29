@@ -3,10 +3,15 @@ from store.models import Product
 
 import random
 
+
 def index(request):
     """ A view to return the home page"""
 
-    products = list(Product.objects.all())
+    products = Product.objects.all()
+
+    products = products.exclude(category=11)
+
+    products = list(products)
 
     products = random.sample(products, 7)
 
