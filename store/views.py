@@ -70,11 +70,12 @@ def product_detail(request, product_id):
     fav_items = None
 
     product = get_object_or_404(Product, pk=product_id)
-
+    
     if request.user.is_authenticated:
-        favs = get_object_or_404(Favourite, userid=request.user)
-        fav_items = list(favs.product_ids)
-
+        favs = Favourite.objects.get_or_create(userid=request.user)
+        if favs[0].product_ids:
+            fav_items = list(favs[0].product_ids)
+          
     context = {
         'product': product,
         'fav_items': fav_items,
@@ -85,8 +86,7 @@ def product_detail(request, product_id):
 
 def membership(request):
 
-    profile=None
-
+    profile = None
     purchase = False
     
     if request.user.is_authenticated:
@@ -108,30 +108,19 @@ def membership(request):
 
 @login_required
 def add_favourite(request, product_id):
-    
-    favs = Favourite.objects.all()
-    
-    for f in favs:
-        if str(f.userid) == str(request.user):
-            fav = get_object_or_404(Favourite, userid=request.user)
-            if product_id in fav.product_ids:
-                fav.product_ids.remove(product_id)
-                fav.save()
-                messages.success(request, "Product removed from favoruties")
-                break
-            else:
-                fav.product_ids.append(product_id)
-                fav.save()
-                messages.success(request, "Product added too favoruties")
-                break
-        else:
-            fav = Favourite(userid=request.user)
-            fav.product_ids.append(product_id)
-            messages.success(request, "Product added too favoruties")
-            fav.save()
-            break
+ 
+    fav = Favourite.objects.get_or_create(userid=request.user)
+    if product_id in fav[0].product_ids:
+        fav[0].product_ids.remove(product_id)
+        fav[0].save()
+        messages.success(request, "Product removed from favoruties")        
+    else:
+        fav[0].product_ids.append(product_id)
+        fav[0].save()
+        messages.success(request, "Product added to favoruties")
+                
   
-    return redirect(reverse('product_detail', args=[product_id]))
+        return redirect(reverse('product_detail', args=[product_id]))
 
 
 @login_required
