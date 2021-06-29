@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.postgres.fields import ArrayField
 
 class Category(models.Model):
 
@@ -31,6 +31,10 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
-#class Favourites(models.Model):
-    #userid
-    #productid
+
+class Favourite(models.Model):
+    userid = models.CharField(max_length=25)
+    product_ids = ArrayField(models.IntegerField(), default=list)
+
+    def __str__(self):
+        return super().__str__()

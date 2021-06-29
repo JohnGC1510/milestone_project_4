@@ -4,9 +4,10 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category
+from .models import Product, Category, Favourite
 from .forms import ProductForm
 from profiles.models import UserProfile
+
 
 def store_home(request):
     """ A view to return the store page"""
@@ -97,6 +98,31 @@ def membership(request):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def add_favourite(request, product_id):
+    
+    favs = Favourite.objects.all()
+    
+    for f in favs:
+        if str(f.userid) == str(request.user):
+            fav = get_object_or_404(Favourite, userid=request.user)
+            if product_id in fav.product_ids:
+                fav.product_ids.remove(product_id)
+                fav.save()
+                break
+            else:
+                fav.product_ids.append(product_id)
+                fav.save()
+                break
+        else:
+            fav = Favourite(userid=request.user)
+            fav.product_ids.append(product_id)
+            fav.save()
+            break
+  
+    return redirect(reverse('product_detail', args=[product_id]))
 
 
 @login_required
