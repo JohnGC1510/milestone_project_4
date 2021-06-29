@@ -59,16 +59,16 @@ def checkout(request):
             for item_id, item_data in bag.items():
                 try:
                     product = Product.objects.get(id=item_id)
-
-                    if product.pk == 22:
-                        profile = UserProfile.objects.get(user=request.user)
-                        profile.membership_type = 3
-                        profile.save()
-                    elif product.pk == 21:
-                        profile = UserProfile.objects.get(user=request.user)
-                        profile.membership_type = 2
-                        profile.save()
-                    
+                    if request.user.is_authenticated:
+                        if product.pk == 22:
+                            profile = UserProfile.objects.get(user=request.user)
+                            profile.membership_type = 3
+                            profile.save()
+                        elif product.pk == 21:
+                            profile = UserProfile.objects.get(user=request.user)
+                            profile.membership_type = 2
+                            profile.save()
+            
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
                             order=order,
@@ -85,6 +85,7 @@ def checkout(request):
                                 product_size=size,
                             )
                             order_line_item.save()
+
                 except Product.DoesNotExist:
                     messages.error(request, (
                         "One of the products in your bag wasn't found in our database."
@@ -112,7 +113,7 @@ def checkout(request):
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
-            currency=settings.STRIPE_CURRENCY
+            currency=settings.STRIPE_CURRENCY,
         )
 
         # Attempt to prefill the form with any info the user maintains in their profile
