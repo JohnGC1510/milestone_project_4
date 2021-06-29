@@ -1,5 +1,5 @@
 # Gold's Gym
-The objective of this website is to advertise a specialist strength gym in order to attain new members, getting users to form a paid subscription to the gym and encouraging users to make purchases from the gym's store. The website will highlight the different unqiue selling points of the gym which includes:
+The objective of this website is to advertise a specialist strength gym in order to attain new members, getting users to purchase membership to the gym and encouraging users to make purchases from the gym's store. The website will highlight the different unqiue selling points of the gym which includes:
 - It's access to specialist strongman equipment such as logs and atlas stones
 - The wide range of classes that are available to sign up too for gym members
 - The specialist items available for purchase from the store.
@@ -223,24 +223,27 @@ The color scheme was entirely based around the colour of the logo - I used dev t
 ![Product-Detials-Page-Wireframe](static/UX/features/store-2.PNG)
 - Each image of a product acts as a url to the product details
 
-### Product Details
+#### Product Details
 - The product details page offers you options to add the item to your shopping bag, to add the items to your favourite list (if you an authenticated user) and to adjust the quanitiy of the item you want. 
 ![Product-Detials-Page-Wireframe](static/UX/features/product_details.PNG)
 - adding an item to your shopping bag will provide you with a toast success message, the shopping cart icon will also update with the number of items in your cart making it easier to keep track of potential spendings.
 ![Product-Detials-Page-Wireframe](static/UX/features/product_details2.PNG)
-### Shoppng Bag
+#### Shoppng Bag
 - The shopping bag allows you to view all the items in your page, presents a nicely layed out costs and gives you the option to proceed to the checkout page.
 ![Product-Detials-Page-Wireframe](static/UX/features/shopping_bag.PNG)
-### Checkout 
+#### Checkout 
 -The checkout page allows you to compelte your shipping information and to make a stripe payment to checkout. Upon successful completion a conformation email is sent to users and they are redirected to a success page.
 If you are signed in and have previously saved delivery information then it will autopopulate. Authenticated users also have the ability to save their checkout information during the checkout process.
  ![Product-Detials-Page-Wireframe](static/UX/features/checkout.PNG)
-### Profile
+#### Profile
 - The profile page allows a user to view any items that they have saved as their favourites, to edit their default billing information or to see any of the classes that they have singed up too.
  ![Product-Detials-Page-Wireframe](static/UX/features/profile.PNG)
-### Product Management
+#### Product Management
 - Admin users have access to product management which allows them to add products to the database alongside being able edit/delete products using convenient buttons in both the products detail view and store view.
  ![Product-Detials-Page-Wireframe](static/UX/features/product_management.PNG)
+### Features left to implement
+
+
 ## **Data Structure**
 ---
 ## Technologies Used

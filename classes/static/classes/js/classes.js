@@ -32,7 +32,12 @@ $(".class-signup-btn").click(function() {
                 curr_class.removeClass("green-bg");
                 curr_button.data('color', 'yellow');
             }
-            alert(resp.message)
+            //alert(resp.message)
+            $("#notifcation-modal").removeClass("hidden");
+            $("#modal-txt").html(resp.message);
+            $(".close-btn").on("click", function () {
+                $("#notifcation-modal").addClass("hidden");
+    });
 
             console.log("Passed data");
         },

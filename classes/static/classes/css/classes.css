@@ -46,3 +46,40 @@
 .red-bg{
     background-color:red !important;
 }
+
+.modal-box{
+    position: fixed;
+    z-index: 999;
+    margin-left:-200px;
+    margin-top:-100px;
+    width:400px;
+    height:200px;
+    top:50%;
+    left:50%;
+    color:#ffec00;
+    background-color:#0a0a0a;
+}
+
+.modal-content{
+    margin: 0 auto;
+    padding-top:40px;
+    width:100%;
+    height:75%;
+    background-color:#0a0a0a;
+    color:#ffec00;
+    text-align: center;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.modal-header{
+    border-bottom: 1px solid black;
+    width:100%;
+    height:25%;
+    text-align: right;
+    
+}
+.hidden {
+  display: none;
+}
+
