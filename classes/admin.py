@@ -12,4 +12,5 @@ class ClassesAdmin(admin.ModelAdmin):
 
     ordering = ('pk',)
 
+
 admin.site.register(Classes, ClassesAdmin)

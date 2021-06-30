@@ -93,6 +93,8 @@ Testing was performed manually for the full site.
 ### JavaScript
 - I tested my javascript using [JS hint](https://jshint.com/) and it passed with the following two warning
 ### PEP8
+- In webhook_handler there is a flake8 error cause by the long line `profile.default_street_address1 = shipping_details.address.line1` that I was unable to split over multiple lines
+- In webhooks.py there is a flake8 error from a long line caused by `payment_intent.payment_failed': handler.handle_payment_intent_payment_failed` that I was unable to split over multiple lines
 - The python code that is not part of the django boilerplate is fully PEP8 compliant and passed the [PEP8 online](http://pep8online.com/) validation.
 
 ## Compatibility

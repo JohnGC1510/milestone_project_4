@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
-from django.contrib import messages
+from django.shortcuts import render, HttpResponse, get_object_or_404
+
 from django.views.decorators.csrf import csrf_exempt
 
 from .models import Classes
@@ -7,9 +7,14 @@ from profiles.models import UserProfile
 
 import json
 
+
 @csrf_exempt
 def classes(request):
-    """ A view to return the about_us page"""
+    """
+    A view that updates the database when a user
+    signs up or removes themself from a class
+    and reutrns the classes view
+    """
     user = request.user
     classes_attending = []
     message = None
@@ -17,7 +22,7 @@ def classes(request):
 
     if request.is_ajax and request.method == "POST":
         curr_class = Classes.objects.get(pk=request.POST.get("class_pk"))
-    
+
         if user.username in curr_class.attending:
             curr_class.attending.remove(user.username)
             message = "You have been removed from the class"
@@ -26,7 +31,7 @@ def classes(request):
             message = "You have subscribed to the class"
         elif len(curr_class.attending) >= curr_class.max_attending:
             message = "The class is currently full please try another class"
-                
+
         curr_class.save()
 
         return HttpResponse(json.dumps(
@@ -37,7 +42,7 @@ def classes(request):
 
     if user.is_authenticated:
         profile = get_object_or_404(UserProfile, user=request.user)
-    
+
     for c in classes:
         if user.username in c.attending:
             classes_attending.append(c.pk)
