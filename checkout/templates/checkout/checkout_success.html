@@ -52,7 +52,7 @@
                 <p>{{ item.product.name }}{% if item.product.has_size %} ({{ item.size }}){% endif %} &times; {{ item.quantity }}<span class="float-right">£{{ item.product.price | calc_subtotal:item.quantity }}</span></p>
             {% endfor %}
             <hr class="long-hr">
-            <p>Subtotal:<span class="float-right">£{{ order.order_total|floatformat:2 }}</spa</p>
+            <p>Subtotal:<span class="float-right">£{{ order.order_total|floatformat:2 }}</span></p>
             <p>Delivery:<span class="float-right">£{{ order.delivery_cost|floatformat:2 }}</span></p>
             <hr class="long-hr">
             <p>Total:<span class="float-right">£{{ order.grand_total|floatformat:2 }}</span></p>
