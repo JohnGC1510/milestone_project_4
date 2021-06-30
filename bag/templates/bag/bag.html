@@ -85,11 +85,11 @@
         <div class="col-12 col-lg-6 col-xl-4 mt-5 mx-auto mb-3">
             <h4>Total</h4>
             <hr class="long-hr">
-            <p>Basket Total:<span class="float-right">£{{ total|floatformat:2 }}</spa</p>
-            <p>Membership Discount:<span class="float-right">£0.00</spa</p>
+            <p>Basket Total:<span class="float-right">£{{ total|floatformat:2 }}</span></p>
+            <p>Membership Discount:<span class="float-right">£0.00</span></p>
             <p>Delivery:<span class="float-right">£{{ delivery|floatformat:2 }}</span></p>
             <hr class="long-hr">
-            <p>Total:<span class="float-right">£{{ grand_total|floatformat:2 }}</spa</p>
+            <p>Total:<span class="float-right">£{{ grand_total|floatformat:2 }}</span></p>
             <hr class="long-hr">
             <a href="{% url 'checkout' %}" class="btn btn-checkout yellow-bg-color black-txt-color btn-lg rounded">
                 <span class="text-uppercase">Secure Checkout</span>
