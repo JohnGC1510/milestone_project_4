@@ -1,6 +1,11 @@
 let clicked;
 let class_pk;
 
+/*
+The click function uses an ajax post to send the class pk to the classes view to be dealt with and changes
+the colour of the targeted table cell to make these changes visually obvious to the user and provides the user
+with a modal notifaction
+*/
 $(".class-signup-btn").click(function() {
     if(!event.detail || event.detail == 1){
         curr_button = $(this)

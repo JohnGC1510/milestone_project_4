@@ -3,7 +3,9 @@ https://stackoverflow.com/questions/20007610/bootstrap-carousel-multiple-frames-
 $('#product-carousel').carousel({
   interval: 10000
 })
-
+/*
+function to automatically slide the carousel every second
+*/
 $('.carousel .carousel-item').each(function(){
     var minPerSlide = 3;
     var next = $(this).next();
