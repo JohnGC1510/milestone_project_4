@@ -79,7 +79,6 @@ As a superuser I want…
 -	To be able to add blog posts
 -	To be able to edit and delete all blog posts and comments
 -	To be able to view and manage site users
--	To be able to view and manage the members store
 -	To be able to add/edit and remove classes from the timetable
 ### **Design Choices**
 #### **Font**
