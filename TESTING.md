@@ -191,6 +191,6 @@ As a superuser I want…
 -	To be able to add/edit and remove classes from the timetable
     - Failed - no crud functionality was implemented for classes
 ## Known Bugs
-- The custom error templates I have added do not show when a 404 or 500 error occur and I was unable to figure out why
+- The custom error templates I have added do not show when a 404 or 500 error occur and I was unable to figure out why, the custom templates are in the root directory as stated in the django documentation so should be found by the defualt view. I set debug=False in settings.py to ensure this wasn't a variable and the issue still persisted.
 - In the stripe console sending a test webhook for payment_intent_success returns a 500 error however in production and development no issues occur and the webhooks succesfully submit.
 ---
