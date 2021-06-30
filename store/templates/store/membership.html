@@ -15,7 +15,7 @@
 <div class="container-fluid">
     <div class="row text-center">
         <div class="col-12">
-            <h2 class="section-heading my-4">Membership Options</h1>
+            <h2 class="section-heading my-4">Membership Options</h2>
                 <hr class="short-hr">
         </div>
     </div>
@@ -32,7 +32,7 @@
     {% endif %}
     <div class="row {% if profile.membership_type == 2 or profile.membership_type == 3 %} d-none {% endif %}}">
         <div class="col-12 col-md-6 offset-lg-2 col-lg-4 text-center">
-            <img class="member-symbol" src="{% static 'store/images/bronze.jpg' %}">
+            <img class="member-symbol" src="{% static 'store/images/bronze.jpg' %}" alt="bronze icon">
         </div>
         
     <div class="col-12 col-md-6 col-lg-4 my-auto %">
@@ -64,7 +64,7 @@
             {% if purchase %}
              <form class="form" action="{% url 'add_to_bag' type.id %}" method="POST">
                     {% csrf_token %}
-                    <div class="form-row"></div>
+                    <div class="form-row">
                         <div class="col-12 my-3 {% if profile.membership_type == 2 and type.name == 'Silver Membership' %} d-none {% endif %}">
                             <input type="submit" class="btn btn-submit rounded text-uppercase" value="Purchase membership">
                             <input class="d-none" type="number" name="quantity" value="1" data-item_id="{{ type.id }}" id="id_qty_{{ type.id }}">
@@ -78,11 +78,12 @@
             {% endif %}
         </div>
     </div>
+    {% endfor %}
 </div>
 
 
 
-{% endfor %}
+
 
 
 
