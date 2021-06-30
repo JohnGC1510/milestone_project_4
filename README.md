@@ -1,10 +1,11 @@
+![About-Page-Wireframe](static/UX/features/responsive_image.PNG)
 # Gold's Gym
-The objective of this website is to advertise a specialist strength gym in order to attain new members, getting users to purchase membership to the gym and encouraging users to make purchases from the gym's store. The website will highlight the different unqiue selling points of the gym which includes:
-- It's access to specialist strongman equipment such as logs and atlas stones
-- The wide range of classes that are available to sign up too for gym members
-- The specialist items available for purchase from the store.
+The objective of this website is to advertise a specialist strength gym in order to attain new members, getting users to purchase membership to the gym and encouraging users to make purchases from the gym's store. The website will highlight the different unique selling points of the gym which includes:
+- It's access to specialist strongman equipment such as logs and atlas stones
+- The wide range of classes that are available to sign up too for gym members
+- The specialist items available for purchase from the store.
 
-The live version of the webiste can be found [here](https://golds-gym.herokuapp.com/)
+The live version of the website can be found [here](https://golds-gym.herokuapp.com/)
 
 To test purchases on the site please use the following card details:
 - Card Number: 4242 4242 4242 4242
@@ -19,7 +20,7 @@ To test purchases on the site please use the following card details:
 
 ### **Customer Goals**
 - Feel satisfied with the benefits of being a gym member
-- Finding a gym to to begin training at
+- Finding a gym to begin training at
 - Easy to sign up too and cancel a class. 
 - It is easy to checkout from the store and complete my purchases quickly
 ## Table of Contents
@@ -85,7 +86,7 @@ As a superuser I want…
 I chose the Goblin One font for the headings, the styling of the text closely resembles the styling of the text in the logo and stands out well on background images. 
 I chose the Raleway font for all body text as it looks elegant and nicely complements the Goblin One font.
 #### **Icons**
-I used Font Awesome icons for my social media links, favourite button, the shopping cart and users navigation items to name a few  as it gives a intuitive way for users to easily navigate across the site.
+I used Font Awesome icons for my social media links, favourite button, the shopping cart and users navigation items to name a few  as it gives an intuitive way for users to easily navigate across the site.
 #### **Colors**
 The color scheme was entirely based around the colour of the logo - I used dev tools to get the exact hex colour of both the yellow background and grey text.
 ### **Wireframes**
@@ -181,119 +182,119 @@ The color scheme was entirely based around the colour of the logo - I used dev t
 ---
 ### **Existing Features**
 #### Home Page
-- Advertises the site key features of the site, the store an the gym classes. The home page has clear call to action buttons to encourage users to sign up. In addition the homepage contains a carousel of products taken from the store to display to the user to encoruage the user to visit the store.
-![Product-Detials-Page-Wireframe](static/UX/features/home_page.PNG)
+- Advertises the site key features of the site, the store and the gym classes. The home page has clear call to action buttons to encourage users to sign up. In addition the homepage contains a carousel of products taken from the store to display to the user to encourage the user to visit the store.
+![Home-page](static/UX/features/home_page.PNG)
 #### Membership Page
 - The membership page describes the benefits of being a member and encourages the user to sign up to the site, the information displayed varies depending on the users membership status.
 <details><summary>Anonymous user</summary>
 <p>
 
-![Checkout-Success-Page-Wireframe](static/UX/features/anon_user.PNG)
+![Membership view for anon user](static/UX/features/anon_user.PNG)
 
 </p>
 </details>
 <details><summary>Bronze user</summary>
 <p>
 
-![Checkout-Success-Page-Wireframe](static/UX/features/bronze_user.PNG)
+![Membership view for bronze user](static/UX/features/bronze_user.PNG)
 
 </p>
 </details>
 <details><summary>Silver user</summary>
 <p>
 
-![Checkout-Success-Page-Wireframe](static/UX/features/silver_user.PNG)
+![Membership view for silver user](static/UX/features/silver_user.PNG)
 
 </p>
 </details>
 <details><summary>Gold user</summary>
 <p>
 
-![Checkout-Success-Page-Wireframe](static/UX/features/gold_user.PNG)
+![Membership view for gold user](static/UX/features/gold_user.PNG)
 
 </p>
 </details>
 
 #### Classes Page
 - The classes page shows both basic and bronze users the types of classes that the gym runs. If you are a gold or silver level member of the gym then you are able to sign up to the different classes using the classes table. 
-- Each row in the table is a button that will send a AJAX post to the python view to add or remove a user to a particular class. Users can sign up to the class by clicking on the button, the second click on the button will remove the user from the class. If a class is full it will appear red and you will be unable to sign up to the class.
-![Product-Detials-Page-Wireframe](static/UX/features/class.PNG)
-![Product-Detials-Page-Wireframe](static/UX/features/class2.PNG)
+- Each row in the table is a button that will send an AJAX post to the python view to add or remove a user to a particular class. Users can sign up to the class by clicking on the button, the second click on the button will remove the user from the class. If a class is full it will appear red and you will be unable to sign up to the class.
+![classes timetable](static/UX/features/class.PNG)
+![classes timetable](static/UX/features/class2.PNG)
 
 #### Store Page
 - The store page allows you to view all the products in the store and filter them to allow you to find the item you wish to purchase
 - There are 4 clear images that allow you to refine your searches as well as a store navigation menu which allows for even further refining of your search
-![Product-Detials-Page-Wireframe](static/UX/features/store-1.PNG)
+![store-page](static/UX/features/store-1.PNG)
 - Product odering my options like price, rating and name in descending or ascending order can be accessed in the menu highlited blue in the below image. In this image the products are arranged by price in descending order.
-![Product-Detials-Page-Wireframe](static/UX/features/store-2.PNG)
+![store-page](static/UX/features/store-2.PNG)
 - Each image of a product acts as a url to the product details
 
 #### Product Details
-- The product details page offers you options to add the item to your shopping bag, to add the items to your favourite list (if you an authenticated user) and to adjust the quanitiy of the item you want. 
-![Product-Detials-Page-Wireframe](static/UX/features/product_details.PNG)
+- The product details page offers you options to add the item to your shopping bag, to add the items to your favourite list (if you an authenticated user) and to adjust the quantity of the item you want. 
+![Product-Detials-Page](static/UX/features/product_details.PNG)
 - adding an item to your shopping bag will provide you with a toast success message, the shopping cart icon will also update with the number of items in your cart making it easier to keep track of potential spendings.
-![Product-Detials-Page-Wireframe](static/UX/features/product_details2.PNG)
+![Product-Detials-Page](static/UX/features/product_details2.PNG)
 #### Shoppng Bag
-- The shopping bag allows you to view all the items in your page, presents a nicely layed out costs and gives you the option to proceed to the checkout page.
-![Product-Detials-Page-Wireframe](static/UX/features/shopping_bag.PNG)
+- The shopping bag allows you to view all the items in your page, presents a nicely laid out costs and gives you the option to proceed to the checkout page.
+![Shopping bag](static/UX/features/shopping_bag.PNG)
 #### Checkout 
--The checkout page allows you to compelte your shipping information and to make a stripe payment to checkout. Upon successful completion a conformation email is sent to users and they are redirected to a success page.
+-The checkout page allows you to complete your shipping information and to make a stripe payment to checkout. Upon successful completion a conformation email is sent to users and they are redirected to a success page.
 If you are signed in and have previously saved delivery information then it will autopopulate. Authenticated users also have the ability to save their checkout information during the checkout process.
- ![Product-Detials-Page-Wireframe](static/UX/features/checkout.PNG)
+ ![Checkout page](static/UX/features/checkout.PNG)
 #### Profile
 - The profile page allows a user to view any items that they have saved as their favourites, to edit their default billing information or to see any of the classes that they have singed up too.
- ![Product-Detials-Page-Wireframe](static/UX/features/profile.PNG)
+ ![Profile page](static/UX/features/profile.PNG)
 #### Product Management
 - Admin users have access to product management which allows them to add products to the database alongside being able edit/delete products using convenient buttons in both the products detail view and store view.
- ![Product-Detials-Page-Wireframe](static/UX/features/product_management.PNG)
+ ![Product Management page](static/UX/features/product_management.PNG)
 ### **Features to imporve**
 I would like to improve all of the following features given appropriate time:
-- The classes page requires imporvement with better custom notifcations when you sign up to a class and with a completely different structure on mobile devices as having to scroll across a table is a poor user experience.
+- The classes page requires improvement with better custom notifications when you sign up to a class and with a completely different structure on mobile devices as having to scroll across a table is a poor user experience.
 - The actual implementation of the classes model could be improved upon by using a dateTime model and generating a weekly schedule of classes. You would then only be able to subscribe to classes in the future and this would also be a more realistic for a gym to have.
-- The html page in classes is poorly constructed with a brute force method of if statements, improving the model would allow for much less html which would improve the websites performace.
-- The product details page would have been improved with a feature that added a carousel of recommened items based on the current item that you are viewing.
+- The html page in classes is poorly constructed with a brute force method of if statements, improving the model would allow for much less html which would improve the websites performance.
+- The product details page would have been improved with a feature that added a carousel of recommended items based on the current item that you are viewing.
 ### **Features to add**
 I would like to add the following features given appropriate time:
 - The current method of getting a membership to the website does not reflect the common system for gyms, you are only able to purchase a membership as a product in the store. I would like to implement a subscription system to allow members to pay for their membership on a monthly basis.
-- I would like to improve the stripe payment method so that it does not rely an american zip code to proccess a payment
+- I would like to improve the stripe payment method so that it does not rely on an american zip code to process a payment
 - I would like to add an about us gym page to better advertise to potential users 
 - I would like to add a strongman/powerlifting blog to allow users to get relevant information on current local and international strongman and powerlifting events.
 
 
 ## **Data Structure**
 ---
-A relational database was used in this project, I intially started development with SQlite3 however had to move development over to a Heroku Postgres database before the end of the project due to the use of ArrayFields in some of my data strucutres. The database used in production is also a Heroku postgres database.
-### Initial data strucutres
+A relational database was used in this project, I initially started development with SQlite3 however had to move development over to a Heroku Postgres database before the end of the project due to the use of ArrayFields in some of my data structures. The database used in production is also a Heroku postgres database.
+### Initial data structures
 ---
 Before starting the project I outlined what I thought the different models I was using would look like:
 
 - The purpose of the class model was to allow users to sign up to a gym class
 
-![Product-Detials-Page-Wireframe](static/UX/features/class_model.PNG)
+![class data model 1](static/UX/features/class_model.PNG)
 
-- The user model was to be updated with member_types to contorl access to different parts of the site and additonal information was to be used from the base django user class to make the profile page more personable
+- The user model was to be updated with member_types to control access to different parts of the site and additional information was to be used from the base django user class to make the profile page more personable
 
-![Product-Detials-Page-Wireframe](static/UX/features/user_model.PNG)
+![user data model](static/UX/features/user_model.PNG)
 
-- The favourites model was to allow users to select favourite products to be viewed on thier profile page.
+- The favourites model was to allow users to select favourite products to be viewed on their profile page.
 
-![Product-Detials-Page-Wireframe](static/UX/features/favourites_model.PNG)
-### **Final data strucutres**
+![favoruties data model](static/UX/features/favourites_model.PNG)
+### **Final data structures**
 ---
 Classes changes:
- - It worked better having the classes foreign key in the user field as it is very simple in django to obtain the current users username, hence the foreign key was not needed. The dateTime field proved to difficult to implement effectively so I repalced it with a day and time for the class, this meant I had to ensure strings were identical and gave very little flexibility when creating the view. However due to time constraints and level of scope I was not able to implement the dateTime field.
+ - It worked better having the classes foreign key in the user field as it is very simple in django to obtain the current users username, hence the foreign key was not needed. The dateTime field proved to difficult too implement effectively so I replaced it with a day and time for the class, this meant I had to ensure strings were identical and gave very little flexibility when creating the view. However due to time constraints and level of scope I was not able to implement the dateTime field.
 
- ![Product-Detials-Page-Wireframe](static/UX/features/classes_final.PNG)
+ ![class data model final](static/UX/features/classes_final.PNG)
 
 User changes:
--  When creating the intial datat structure I did not take into accoutn a user would want to save delivery data so appropriate field were added. To implement the member_types I used
+-  When creating the initial data structure I did not take into account a user would want to save delivery data so appropriate field were added. To implement the member_types I used
 a positive small integer field with a choice between either 1, 2 or 3 with each number representing a different level of gym membership. I represented the membership types using integers as it made it much easier when accessing the data to modify the UserProfile in the checkout view.
 - I did not add the types such as name - these are not included in the default django user model and it was out of scope to edit this model to allow for a more personable interface. Ideally I would add these fields given more time. 
- ![Product-Detials-Page-Wireframe](static/UX/features/profile_final.PNG)
+ ![user data model](static/UX/features/profile_final.PNG)
 
  Favourites model:
- - the final model was essentially identical to the initial model however instead of a user foreignkey I used a char field as request.user readily returned a unqiue user name that I could store and having a unique string field related to each array made operations in the profile view much easier.
- ![Product-Detials-Page-Wireframe](static/UX/features/favourites_final.PNG)
+ - the final model was essentially identical to the initial model however instead of a user foreignkey I used a char field as request.user readily returned a unique user name that I could store and having a unique string field related to each array made operations in the profile view much easier.
+ ![favoruties data model](static/UX/features/favourites_final.PNG)
 
 
 
@@ -373,7 +374,7 @@ os.environ['STRIPE_WH_SECRET'] = '**********************************************
 ### Step 2.1 - Getting the environment variables
 - To set up all the environmental variables above you will need have made a Stripe account. 
 - STRIPE_PUBLIC_KEY = Publishable key, STRIPE_SECRET_KEY = Secret key, never reveal your secret key.
-- To get the WH secret you need to setup a webhook, on the lefthand menu of the page click on developes and navigate to the Webhooks page.
+- To get the WH secret you need to setup a webhook, on the lefthand menu of the page click on developers and navigate to the Webhooks page.
 - Click the button + Add Endpoint and complete the form by adding you local development environment as the URL (do not forget to end in a / eg. 
 `my-local-env.gitpod.io/checkout/wh/`  ) and click the receive all events link in the middle of the box.
 - You now have a webhook with a signing secret, this is your WH secret variable.
@@ -520,3 +521,40 @@ USE_AWS = 1
 - Common issues include outdated requirements.txt and/or missing Procfile, if errors occur, check these are both correct before investigating further 
 
 
+## Credits
+
+### Resources
+
+- [Code Institute Course Content](https://courses.codeinstitute.net/) - Main source of fundamental knowledge, particularly the Boutique Ado mini-project.
+- Code Institute **SLACK Community** - Main source of assistance
+- [Stack Overflow](https://stackoverflow.com/) - General resource.
+- [CSS-Tricks](https://css-tricks.com/) - General resource.
+- [W3.CSS](https://www.w3schools.com/w3css/4/w3.css) - General resource.
+- [Am I Responsive](http://ami.responsivedesign.is/) - Responsive website mockup image generator.
+- [Balsamiq](https://balsamiq.com/wireframes/) - Wireframing design tool.
+
+### Media
+
+- Site images used are from various contributors on [shutterstock](https://www.shutterstock.com/home/), with a paid license.
+- Site logo designed taken from [Golds Gym](https://www.goldsgym.com/)
+- Some product images taken from [Golds Gym](https://www.goldsgym.com/)
+- Icons used in the Technologies Used section of this document are taken from various sources (mainly Wikipeadia).
+- Home page lead-in icons downloaded as svg from [Material Icons](https://material.io/resources/icons/)
+- I do not own the right to any images for products used on this site. 
+
+### Content
+
+All content is self-written by site creator and based on my [first milestone project](https://github.com/JohnGC1510/milestone-proejct-1)
+
+### Code Snippets
+
+- How to correctly impement my rotating products carousel came from [Stackoverflow](https://stackoverflow.com/questions/20007610/bootstrap-carousel-multiple-frames-at-oncev)
+
+
+## Acknowledgments
+
+I would like to thank:
+
+- My mentor, **Rohit Sharma** for his guidance and advice.
+- Everyone in Tutor support for always being patient and friendly when approaching with assistance during course material.
+- **CI staff** and **Slack Community** for always being on-hand with questions posted and assistance requests.
