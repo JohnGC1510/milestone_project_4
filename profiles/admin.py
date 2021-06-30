@@ -8,4 +8,5 @@ class ProfileAdmin(admin.ModelAdmin):
         'membership_type',
     )
 
+
 admin.site.register(UserProfile, ProfileAdmin)

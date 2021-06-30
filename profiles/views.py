@@ -11,10 +11,14 @@ from store.models import Product, Favourite
 
 @login_required
 def profile(request):
-    """ Display user's profile """
+    """
+    View that displays the users profile and retreives
+    and structres the classes and favorites models
+    to allow for viewing in the profile template
+    """
 
     profile = get_object_or_404(UserProfile, user=request.user)
-    class_list= []
+    class_list = []
     fav = None
     fave_products = None
 
@@ -25,7 +29,7 @@ def profile(request):
             messages.success(request, 'Profile updated successfully')
     else:
         form = UserProfileForm(instance=profile)
-    
+
     all_classes = Classes.objects.all()
 
     for c in all_classes:
