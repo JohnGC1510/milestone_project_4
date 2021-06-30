@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
 
+
 class Category(models.Model):
 
     class Meta:

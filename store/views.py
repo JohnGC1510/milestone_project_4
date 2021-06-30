@@ -10,7 +10,11 @@ from profiles.models import UserProfile
 
 
 def store_home(request):
-    """ A view to return the store page"""
+    """
+    A view to retreive the products from the db
+    and filter them when a request is made from
+    the front end
+    """
     template = 'store/store_home.html'
     query = None
     categories = None
@@ -46,7 +50,8 @@ def store_home(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
             queries = Q(name__icontains=query) | Q(
                 description__icontains=query)
@@ -70,12 +75,12 @@ def product_detail(request, product_id):
     fav_items = None
 
     product = get_object_or_404(Product, pk=product_id)
-    
+
     if request.user.is_authenticated:
         favs = Favourite.objects.get_or_create(userid=request.user)
         if favs[0].product_ids:
             fav_items = list(favs[0].product_ids)
-          
+
     context = {
         'product': product,
         'fav_items': fav_items,
@@ -88,7 +93,7 @@ def membership(request):
 
     profile = None
     purchase = False
-    
+
     if request.user.is_authenticated:
         purchase = True
         profile = get_object_or_404(UserProfile, user=request.user)
@@ -108,18 +113,17 @@ def membership(request):
 
 @login_required
 def add_favourite(request, product_id):
- 
+
     fav = Favourite.objects.get_or_create(userid=request.user)
     if product_id in fav[0].product_ids:
         fav[0].product_ids.remove(product_id)
         fav[0].save()
-        messages.success(request, "Product removed from favoruties")        
+        messages.success(request, "Product removed from favoruties")
     else:
         fav[0].product_ids.append(product_id)
         fav[0].save()
         messages.success(request, "Product added to favoruties")
-                
-  
+
         return redirect(reverse('product_detail', args=[product_id]))
 
 
@@ -138,10 +142,13 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('add_product'))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add product. Please ensure the form is valid.'
+            )
     else:
         form = ProductForm()
-        
+
     template = 'store/add_product.html'
     context = {
         'form': form,
@@ -166,7 +173,10 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                            request,
+                            'Failed to update product. Ensure form is valid.'
+                        )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
