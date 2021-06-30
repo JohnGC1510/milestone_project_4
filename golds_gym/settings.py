@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = False
 
 ALLOWED_HOSTS = ['golds-gym.herokuapp.com', 'localhost']
 
@@ -131,8 +131,8 @@ if 'DATABASE_URL' in os.environ:
     }
 else:
     DATABASES = {
-        'default': dj_database_url.parse('postgres://wuelnmkowegyfh:29081faf54a12a650c716dc66887dbe936682b6542cff0e43524b08b83be88e5@ec2-54-74-156-137.eu-west-1.compute.amazonaws.com:5432/d3t9loi1bnsano')    
-        }
+        'default': dj_database_url.parse('postgres://wuelnmkowegyfh:29081faf54a12a650c716dc66887dbe936682b6542cff0e43524b08b83be88e5@ec2-54-74-156-137.eu-west-1.compute.amazonaws.com:5432/d3t9loi1bnsano')
+    }
 
 
 # Password validation
